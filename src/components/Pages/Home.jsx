@@ -1,5 +1,10 @@
-import React from "react";
-import Hero from "../Hero";
+// /src/components/Pages/Home.jsx
+
+import React, { useMemo, useState } from "react";
+import HeroStyle4 from "../Hero/HeroStyle4";
+import PortfolioSlider from "../Slider/PortfolioSlider";
+import SectionHeading from "../SectionHeading";
+
 import Spacing from "../Spacing";
 import FunFact from "../FunFact";
 import About from "../About";
@@ -7,21 +12,22 @@ import WhyChose from "../WhyChose";
 import Service from "../Service";
 import Portfolio from "../Portfolio";
 import Button from "../Button";
-import SectionHeading from "../SectionHeading";
 import Award from "../Award";
 import Accordion from "../Accordion";
 import Cta from "../Cta";
 import TestimonialSlider from "../Slider/TestimonialSlider";
 import PostCarousel from "../Slider/PostCarousel";
 import { pageTitle } from "../../helpers/PageTitle";
-import LogoBar from "../Logos";
 import ServiceSlider from "../Slider/ServiceSlider";
+
+// -------------------- DATA --------------------
 const funfactData = [
   { title: "Years of Experience", number: "3+" },
   { title: "Stores Managed", number: "50+" },
   { title: "Profit Generated", number: "$700K+" },
   { title: "Sales Generated", number: "$4M+" },
 ];
+
 const whyChoseFeatureData = [
   {
     title: "Talented, professional & expert team",
@@ -39,6 +45,7 @@ const whyChoseFeatureData = [
       "Our team, specializing in strategic digital marketing, are not partners with the world is leading brands. Breaking from the norm, we push boundaries and merge.",
   },
 ];
+
 const serviceListData = [
   {
     title: "WP Development",
@@ -69,6 +76,7 @@ const serviceListData = [
     href: "/service/service-details",
   },
 ];
+
 const portfolioData = [
   {
     href: "/portfolio/portfolio-details",
@@ -95,6 +103,52 @@ const portfolioData = [
     btnText: "See Project",
   },
 ];
+
+// ✅ Slider data (tabs: ebay / etsy)
+// NOTE: Local images show best if they are in /public/images/... and you use "/images/...."
+const portfolioSliderData = [
+  {
+    platform: "ebay",
+    thumbnailSrc:
+      "https://images.pexels.com/photos/36762/scarlet-honeyeater-bird-red-feathers.jpg?cs=srgb&dl=pexels-pixabay-36762.jpg&fm=jpg",
+    miniTitle: "eBay Store Growth",
+    title: "Corporate Webly <br />Application",
+    subTitle:
+      "From product research to listing optimization and scaling profitability <br /> with full end-to-end store management.",
+    href: "/portfolio/portfolio-details",
+  },
+  {
+    platform: "ebay",
+    thumbnailSrc:
+      "https://png.pngtree.com/thumb_back/fh260/background/20240521/pngtree-world-best-for-mobile-hd-wallpapers-pxfuel-photo-image_15804476.jpg",
+    miniTitle: "Account Optimization",
+    title: "eCommerce User <br />Interface Design",
+    subTitle:
+      "From store setup to order handling and customer support <br /> ensuring growth without your daily time involvement.",
+    href: "/portfolio/portfolio-details",
+  },
+  {
+    platform: "etsy",
+    thumbnailSrc:
+      "https://static.vecteezy.com/system/resources/thumbnails/070/579/927/small_2x/orange-flowers-in-a-field-with-a-blurry-background-photo.jpg",
+    miniTitle: "Etsy Store Scaling",
+    title: "Multi Dimension <br />Two Square",
+    subTitle:
+      "From niche research to keyword strategy and conversion improvements <br /> to help your Etsy shop grow consistently.",
+    href: "/portfolio/portfolio-details",
+  },
+  {
+    platform: "etsy",
+    thumbnailSrc:
+      "https://static.vecteezy.com/system/resources/thumbnails/049/855/414/small/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-free-photo.jpg",
+    miniTitle: "Creative Listing Strategy",
+    title: "Animated Abstract <br />3D Background",
+    subTitle:
+      "From product positioning to brand visuals and shop optimization <br /> to maximize organic sales and repeat buyers.",
+    href: "/portfolio/portfolio-details",
+  },
+];
+
 const awardData = [
   {
     brand: "Behance",
@@ -121,6 +175,7 @@ const awardData = [
     awardImgUrl: "/images/creative-agency/award_img_3.svg",
   },
 ];
+
 const testimonialData = [
   {
     text: "Zivans Motion Graphics did an excellent job on my video related projects. The motion graphics added an extra layer of polish and really brought the video to life. I highly recommend their high quality services and work.",
@@ -138,6 +193,7 @@ const testimonialData = [
     avatarDesignation: "MD at Delta",
   },
 ];
+
 const faqData = [
   {
     title: "01. I need your services and how can i contact you throw email?",
@@ -216,10 +272,11 @@ const postData = [
     url: "/portfolio/portfolio-details",
   },
 ];
+
 const servideData = [
   {
     iconSrc: "/images/marketing-agency/service_icon_1.svg",
-    title: "On page optimization",
+    title: "ebay",
     subTitle:
       "A one provide moment. Interesting an a up se you side it all the and don't listen. Confident picture she one the what I nor least.",
     btnText: "See More",
@@ -227,55 +284,7 @@ const servideData = [
   },
   {
     iconSrc: "/images/marketing-agency/service_icon_2.svg",
-    title: "Marketing Consulting",
-    subTitle:
-      "A one provide moment. Interesting an a up se you side it all the and don't listen. Confident picture she one the what I nor least.",
-    btnText: "See More",
-    btnUrl: "/service/service-details",
-  },
-  {
-    iconSrc: "/images/marketing-agency/service_icon_3.svg",
-    title: "Video Campaign",
-    subTitle:
-      "A one provide moment. Interesting an a up se you side it all the and don't listen. Confident picture she one the what I nor least.",
-    btnText: "See More",
-    btnUrl: "/service/service-details",
-  },
-  {
-    iconSrc: "/images/marketing-agency/service_icon_4.svg",
-    title: "Branding Design",
-    subTitle:
-      "A one provide moment. Interesting an a up se you side it all the and don't listen. Confident picture she one the what I nor least.",
-    btnText: "See More",
-    btnUrl: "/service/service-details",
-  },
-  {
-    iconSrc: "/images/marketing-agency/service_icon_1.svg",
-    title: "On page optimization",
-    subTitle:
-      "A one provide moment. Interesting an a up se you side it all the and don't listen. Confident picture she one the what I nor least.",
-    btnText: "See More",
-    btnUrl: "/service/service-details",
-  },
-  {
-    iconSrc: "/images/marketing-agency/service_icon_2.svg",
-    title: "Marketing Consulting",
-    subTitle:
-      "A one provide moment. Interesting an a up se you side it all the and don't listen. Confident picture she one the what I nor least.",
-    btnText: "See More",
-    btnUrl: "/service/service-details",
-  },
-  {
-    iconSrc: "/images/marketing-agency/service_icon_3.svg",
-    title: "Video Campaign",
-    subTitle:
-      "A one provide moment. Interesting an a up se you side it all the and don't listen. Confident picture she one the what I nor least.",
-    btnText: "See More",
-    btnUrl: "/service/service-details",
-  },
-  {
-    iconSrc: "/images/marketing-agency/service_icon_4.svg",
-    title: "Branding Design",
+    title: "Etsy ",
     subTitle:
       "A one provide moment. Interesting an a up se you side it all the and don't listen. Confident picture she one the what I nor least.",
     btnText: "See More",
@@ -283,32 +292,44 @@ const servideData = [
   },
 ];
 
-export default function Home() {
+// -------------------- PAGE --------------------
+export default function Home({ darkMode }) {
   pageTitle("Zivan");
+
+  // ✅ Hooks MUST be inside component
+  const [activeTab, setActiveTab] = useState("ebay");
+
+  const filteredPortfolioSliderData = useMemo(() => {
+    return portfolioSliderData.filter((item) => item.platform === activeTab);
+  }, [activeTab]);
+
   return (
     <>
-      <Hero
-        title={[
-          "Grows Businesses",
-          "Generates Leads",
-          "Increases Traffic",
-          "Drives Sales",
-        ]}
-        subtitle="Turn Your eCommerce Vision into Profitable Business"
-        bgUrl="https://ecomxpertfs.com/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-05-at-19.43.45_338aa8f1.jpg"
+      <HeroStyle4
+        title="Mastering Digital Realm, Exploring the Dynamic World of Our Digital Studio"
+        subTitle="Our agency offers a comprehensive suite of lots services, including Branding, Advertising, Social marketing, Video making, and Marketing analysis."
+        thumbnailSrc={
+          darkMode
+            ? "/images/digital-agency/hero_bg_dark.jpeg"
+            : "/images/digital-agency/hero_bg_dark.jpeg"
+        }
+        bgUrl="https://static.vecteezy.com/system/resources/thumbnails/049/855/871/small/stunning-high-resolution-nature-and-landscape-backgrounds-breathtaking-scenery-in-hd-photo.jpg"
       />
 
       <Spacing lg="125" md="70" />
-      <LogoBar />
+      <div className="container">
+        <FunFact data={funfactData} />
+      </div>
+
       <Spacing lg="125" md="70" />
       <About
         thumbnail="https://ecomexpertspro.com/images/know-about-us-side.png"
         uperTitle="Who We Are"
         title="Your End-to-End Ecom Growth Partner"
         subTitle="Ecom Guild helps people build profitable side businesses on e-commerce marketplaces like eBay and Etsy. 
-  We are a guild of 20+ experienced professionals who handle everything end to end — from product research and listings 
-  to order management, customer support, and account optimization — so you can earn with minimal time involvement. 
-  Our mission is simple: make e-commerce easy, transparent, and accessible for anyone looking to start a side hustle."
+We are a guild of 20+ experienced professionals who handle everything end to end — from product research and listings 
+to order management, customer support, and account optimization — so you can earn with minimal time involvement. 
+Our mission is simple: make e-commerce easy, transparent, and accessible for anyone looking to start a side hustle."
         featureList={[
           "End-to-end eBay & Etsy store management",
           "Product research, listings, and order fulfillment",
@@ -319,9 +340,6 @@ export default function Home() {
       />
 
       <Spacing lg="125" md="70" />
-      <div className="container">
-        <FunFact data={funfactData} />
-      </div>
 
       <section className="cs_p76_full_width" id="service">
         <Spacing lg="143" md="75" />
@@ -338,27 +356,53 @@ export default function Home() {
         whyChoseFeatureData={whyChoseFeatureData}
         thumbnailSrc="/images/creative-agency/why_choose_us_img_3.jpeg"
       />
+
       <Spacing lg="150" md="80" />
-      <section className="cs_primary_bg">
-        <Spacing lg="143" md="75" />
-        <div className="container">
-          <SectionHeading
-            title="Our core services"
-            subTitle="Services"
-            variantColor="cs_white_color"
-          />
-          <Spacing lg="45" md="30" />
-        </div>
-        <div className="container">
-          <Service
-            sectionTitle="Our core services"
-            sectionSubTitle="Services"
-            data={serviceListData}
-          />
-          <Spacing lg="135" md="65" />
-        </div>
-      </section>
+
+      {/* ✅ Portfolio Slider with Left Heading + Right Tabs (eBay / Etsy) */}
       <section>
+        <Spacing lg="143" md="75" />
+
+        <div className="container">
+          <div className="d-flex flex-column flex-lg-row align-items-lg-end justify-content-between gap-4">
+            {/* Left: Heading */}
+            <div>
+              <div className="cs_section_subtitle cs_primary_color cs_fs_16 cs_medium text-uppercase home-portfolio">
+                Portfolio
+              </div>
+              <h2 className="cs_section_title cs_fs_68 mb-0">
+                Some featured work
+              </h2>
+            </div>
+
+            {/* Right: Tabs */}
+            <div className="cs_portfolio_tabs">
+              <button
+                type="button"
+                className={`cs_tab_btn ${activeTab === "ebay" ? "active" : ""}`}
+                onClick={() => setActiveTab("ebay")}
+              >
+                eBay
+              </button>
+              <button
+                type="button"
+                className={`cs_tab_btn ${activeTab === "etsy" ? "active" : ""}`}
+                onClick={() => setActiveTab("etsy")}
+              >
+                Etsy
+              </button>
+            </div>
+          </div>
+
+          <Spacing lg="85" md="45" />
+        </div>
+
+        <PortfolioSlider data={filteredPortfolioSliderData} />
+        <Spacing lg="150" md="80" />
+      </section>
+
+      {/* Optional existing portfolio grid */}
+      {/* <section>
         <Spacing lg="143" md="75" />
         <div className="container">
           <SectionHeading title="Some featured work" subTitle="Portfolio" />
@@ -370,8 +414,9 @@ export default function Home() {
           </div>
         </div>
         <Spacing lg="150" md="80" />
-      </section>
-      <section className="cs_primary_bg cs_shape_animation_2">
+      </section> */}
+
+      {/* <section className="cs_primary_bg cs_shape_animation_2">
         <Spacing lg="143" md="75" />
         <div className="cs_shape_1 position-absolute">
           <svg
@@ -389,6 +434,7 @@ export default function Home() {
             </g>
           </svg>
         </div>
+
         <div className="container">
           <SectionHeading
             title="Our prize achievement"
@@ -398,8 +444,10 @@ export default function Home() {
           <Spacing lg="85" md="45" />
           <Award data={awardData} />
         </div>
+
         <Spacing lg="150" md="80" />
-      </section>
+      </section> */}
+
       <TestimonialSlider
         layeredImages={[
           "/images/creative-agency/layer_img_1.jpeg",
@@ -410,6 +458,7 @@ export default function Home() {
         ]}
         data={testimonialData}
       />
+
       <section>
         <div className="container">
           <Cta
@@ -420,14 +469,16 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="cs_p76_full_width">
+
+      {/* <section className="cs_p76_full_width">
         <Spacing lg="143" md="75" />
         <div className="container">
           <SectionHeading title="Some recent news" subTitle="Our Blog" />
           <Spacing lg="85" md="45" />
         </div>
         <PostCarousel data={postData} />
-      </section>
+      </section> */}
+
       <section>
         <Spacing lg="143" md="75" />
         <div className="container">

@@ -1,6 +1,13 @@
-import React from 'react';
-import parse from 'html-react-parser';
-import { Link } from 'react-router-dom';
+import React from "react";
+import parse from "html-react-parser";
+import { Link } from "react-router-dom";
+
+const safeParse = (val) => {
+  if (typeof val === "string") return parse(val);
+  if (val === null || val === undefined) return "";
+  // agar kabhi ReactNode ya number aaye to simply show it
+  return String(val);
+};
 
 export default function PortfolioStyle2({
   thumbnailSrc,
@@ -19,13 +26,16 @@ export default function PortfolioStyle2({
       />
       <div className="cs_portfolio_text">
         <h3 className="cs_portfolio_minititle cs_fs_16 cs_secondary_color cs_medium">
-          {miniTitle}
+          {miniTitle || ""}
         </h3>
+
         <h2 className="cs_portfolio_title cs_fs_68">
-          <Link to={href}>{parse(title)}</Link>
+          <Link to={href || "#"}>{safeParse(title)}</Link>
         </h2>
-        <p className="cs_portfolio_subtitle">{parse(subTitle)}</p>
-        <Link to={href} className="cs_portfolio_btn cs_primary_color">
+
+        <p className="cs_portfolio_subtitle">{safeParse(subTitle)}</p>
+
+        <Link to={href || "#"} className="cs_portfolio_btn cs_primary_color">
           <svg
             width={51}
             height={16}

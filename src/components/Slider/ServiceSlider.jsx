@@ -10,10 +10,10 @@ export default function ServiceSlider({ data }) {
         slidesPerView={1}
         spaceBetween={24}
         speed={800}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
+        // pagination={{
+        //   clickable: true,
+        // }}
+        // modules={[Pagination]}
         breakpoints={{
           500: {
             slidesPerView: 2,

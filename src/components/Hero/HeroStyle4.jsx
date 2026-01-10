@@ -1,7 +1,8 @@
-import React from 'react';
-import VideoModal from '../VideoModal';
+import React from "react";
+// import ImageWaveBlock from "../ImageWaveBlock";
+import ImageWaveBlock from "../VideoModal";
 
-export default function HeroStyle4({ videoSrc, bgUrl, thumbnailSrc }) {
+export default function HeroStyle4({ bgUrl, thumbnailSrc, title, subTitle }) {
   return (
     <section
       className="cs_hero cs_style_4 position-relative"
@@ -11,23 +12,14 @@ export default function HeroStyle4({ videoSrc, bgUrl, thumbnailSrc }) {
     >
       <div className="container">
         <div className="cs_hero_text position-relative">
-          <h1 className="cs_hero_title cs_fs_68">
-            Mastering Digital Realm, Exploring the Dynamic World of Our Digital
-            Studio
-          </h1>
+          <h1 className="cs_hero_title cs_fs_68">{title}</h1>
         </div>
+
         <div className="row align-items-center">
           <div className="col-lg-5">
             <div className="cs_hero_subtitle">
-              <p className="mb-0">
-                Our agency offers a comprehensive suite of lots services,
-                including Branding, Advertising, Social marketing, Video making,
-                and Marketing analysis.
-              </p>
-              <a
-                href="#service"
-                className="cs_down_btn cs_center cs_primary_color"
-              >
+              <p className="mb-0">{subTitle}</p>
+              <a href="#service" className="cs_down_btn cs_center cs_primary_color">
                 <svg
                   width={8}
                   height={33}
@@ -43,11 +35,22 @@ export default function HeroStyle4({ videoSrc, bgUrl, thumbnailSrc }) {
               </a>
             </div>
           </div>
+
           <div className="col-lg-7">
-            <VideoModal videoSrc={videoSrc} bgUrl={bgUrl} />
+            <ImageWaveBlock
+              bgUrl={bgUrl}
+              // icon optional:
+              showIcon={true}
+              // click optional (agar aap chaho kuch open ho):
+              onClick={() => {
+                // e.g. open image in new tab OR open your own modal
+                // window.open(bgUrl, "_blank");
+              }}
+            />
           </div>
         </div>
       </div>
+
       <div className="cs_hero_shape">
         <svg
           width={458}

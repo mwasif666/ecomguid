@@ -46,9 +46,9 @@ export default function Header({
                     mobileToggle ? 'cs_nav_list cs_active' : 'cs_nav_list'
                   }`}
                 >
-                  <li className="menu-item-has-children cs_mega_menu">
+                  <li className="">
                     <Link to="/">Home</Link>
-                    <DropDown>
+                    {/* <DropDown>
                       <ul className="cs_mega_wrapper">
                         <li className="menu-item-has-children">
                           <Link to="/">Dark Version</Link>
@@ -105,27 +105,26 @@ export default function Header({
                           </DropDown>
                         </li>
                       </ul>
-                    </DropDown>
+                    </DropDown> */}
                   </li>
                   <li>
                     <Link to="about">About</Link>
                   </li>
-                  <li className="menu-item-has-children">
-                    <Link to="service">Service</Link>
-                    <DropDown>
-                      <ul>
-                        <li>
-                          <Link to="service">Service</Link>
-                        </li>
-                        <li>
-                          <Link to="service/service-details">
-                            Service Details
-                          </Link>
-                        </li>
-                      </ul>
-                    </DropDown>
-                  </li>
-                  <li className="menu-item-has-children">
+                 <li className="menu-item-has-children">
+  <Link to="/portfolio">Portfolio</Link>
+  <DropDown>
+    <ul>
+      <li>
+        <Link to="ebay">eBay</Link>
+      </li>
+      <li>
+        <Link to="etsy">Etsy</Link>
+      </li>
+    </ul>
+  </DropDown>
+</li>
+
+                  {/* <li className="menu-item-has-children">
                     <Link to="blog">Blog</Link>
                     <DropDown>
                       <ul>
@@ -140,8 +139,8 @@ export default function Header({
                         </li>
                       </ul>
                     </DropDown>
-                  </li>
-                  <li className="menu-item-has-children">
+                  </li> */}
+                  {/* <li className="menu-item-has-children">
                     <Link to="shop">Shop</Link>
                     <DropDown>
                       <ul>
@@ -165,9 +164,9 @@ export default function Header({
                         </li>
                       </ul>
                     </DropDown>
-                  </li>
-                  <li className="menu-item-has-children">
-                    <Link to="/">Pages</Link>
+                  </li> */}
+                  {/* <li className="">
+                    <Link to="/">Portfolio</Link>
                     <DropDown>
                       <ul>
                         <li>
@@ -191,7 +190,7 @@ export default function Header({
                         </li>
                       </ul>
                     </DropDown>
-                  </li>
+                  </li> */}
                   <li>
                     <Link to="contact">Contact</Link>
                   </li>
