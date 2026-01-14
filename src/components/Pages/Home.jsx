@@ -20,6 +20,12 @@ import PostCarousel from "../Slider/PostCarousel";
 import { pageTitle } from "../../helpers/PageTitle";
 import ServiceSlider from "../Slider/ServiceSlider";
 
+
+// Images
+import image1 from "../../assets/image_2.jpeg"
+
+
+
 // -------------------- DATA --------------------
 const funfactData = [
   { title: "Years of Experience", number: "3+" },
@@ -30,19 +36,19 @@ const funfactData = [
 
 const whyChoseFeatureData = [
   {
-    title: "Talented, professional & expert team",
+    title: "Low Investment Risk",
     content:
-      "Our team, specializing in strategic digital marketing, are not partners with the world is leading brands. Breaking from the norm, we push boundaries and merge.",
+      " We start with as little as $100, and the risk of investment loss is very low.",
   },
   {
-    title: "Highly accuracy AI based system",
+    title: "No Upfront Fees",
     content:
-      "Our team, specializing in strategic digital marketing, are not partners with the world is leading brands. Breaking from the norm, we push boundaries and merge.",
+      "We work on a partnership basis and only get paid when the business makes a profit.",
   },
   {
-    title: "Secret successful brand strategy formula",
+    title: "Proven Experience & Team",
     content:
-      "Our team, specializing in strategic digital marketing, are not partners with the world is leading brands. Breaking from the norm, we push boundaries and merge.",
+      "With a team of 20+ professionals, 3+ years of experience, and 50+ stores successfully managed, we know what works.",
   },
 ];
 
@@ -110,12 +116,12 @@ const portfolioSliderData = [
   {
     platform: "ebay",
     thumbnailSrc:
-      "https://images.pexels.com/photos/36762/scarlet-honeyeater-bird-red-feathers.jpg?cs=srgb&dl=pexels-pixabay-36762.jpg&fm=jpg",
-    miniTitle: "eBay Store Growth",
-    title: "Corporate Webly <br />Application",
-    subTitle:
-      "From product research to listing optimization and scaling profitability <br /> with full end-to-end store management.",
-    href: "/portfolio/portfolio-details",
+      image1,
+    // miniTitle: "eBay Store Growth",
+    // title: "Corporate Webly <br />Application",
+    // subTitle:
+    //   "From product research to listing optimization and scaling profitability <br /> with full end-to-end store management.",
+    href: "/portfolioDetail",
   },
   {
     platform: "ebay",
@@ -269,7 +275,7 @@ const postData = [
     thumbnailSrc: "/images/creative-agency/post_4.jpeg",
     title: "Your agency need to replace some artistic mind people",
     date: "15 Mar 2023",
-    url: "/portfolio/portfolio-details",
+    url: "/portfolio/portfolio-details-page",
   },
 ];
 
@@ -277,20 +283,19 @@ const servideData = [
   {
     iconSrc: "/images/marketing-agency/service_icon_1.svg",
     title: "ebay",
-    subTitle:
-      "A one provide moment. Interesting an a up se you side it all the and don't listen. Confident picture she one the what I nor least.",
-    btnText: "See More",
-    btnUrl: "/service/service-details",
+    subTitle:"We offer end-to-end eBay store management, covering account creation and setup, product research, listing creation & optimization, order processing and fulfillment, customer support, returns & refunds handling, account health management, and performance tracking and reporting.",
+    // btnText: "See More",
+    // btnUrl: "/service/service-details",
   },
   {
     iconSrc: "/images/marketing-agency/service_icon_2.svg",
-    title: "Etsy ",
-    subTitle:
-      "A one provide moment. Interesting an a up se you side it all the and don't listen. Confident picture she one the what I nor least.",
-    btnText: "See More",
-    btnUrl: "/service/service-details",
+    title: "Etsy",
+    subTitle:"We offer end-to-end Etsy store management, covering account creation and setup, niche & product research, listing creation & optimization, order processing & fulfillment, customer support, returns & refunds handling, account health management, and performance tracking and reporting.",
+    // btnText: "See More",
+    // btnUrl: "/service/service-details",
   },
 ];
+
 
 // -------------------- PAGE --------------------
 export default function Home({ darkMode }) {
@@ -323,21 +328,33 @@ export default function Home({ darkMode }) {
 
       <Spacing lg="125" md="70" />
       <About
-        thumbnail="https://ecomexpertspro.com/images/know-about-us-side.png"
-        uperTitle="Who We Are"
-        title="Your End-to-End Ecom Growth Partner"
-        subTitle="Ecom Guild helps people build profitable side businesses on e-commerce marketplaces like eBay and Etsy. 
-We are a guild of 20+ experienced professionals who handle everything end to end — from product research and listings 
-to order management, customer support, and account optimization — so you can earn with minimal time involvement. 
-Our mission is simple: make e-commerce easy, transparent, and accessible for anyone looking to start a side hustle."
-        featureList={[
-          "End-to-end eBay & Etsy store management",
-          "Product research, listings, and order fulfillment",
-          "Customer support & account optimization",
-        ]}
-        btnText="Learn More"
-        btnUrl="/about"
-      />
+  thumbnail="https://ecomexpertspro.com/images/know-about-us-side.png"
+  uperTitle="Who We Are"
+  title="Your End-to-End Ecom Growth Partner"
+  subTitle={
+    <>
+      Ecom Guild helps people build profitable side businesses on e-commerce
+      marketplaces like eBay and Etsy.
+      <br />
+      <br />
+      We are a guild of 20+ professionals who manage everything end to end 
+      product research, listings, orders, customer support, and account management
+       so our partners can earn with minimal time involvement.
+      <br />
+      <br />
+      Our goal is simple: make e-commerce easy, transparent, and accessible for
+      anyone looking to start a side hustle.
+    </>
+  }
+  // featureList={[
+  //   "End-to-end eBay & Etsy store management",
+  //   "Product research, listings, and order fulfillment",
+  //   "Customer support & account optimization",
+  // ]}
+  btnText="Learn More"
+  btnUrl="/about"
+/>
+
 
       <Spacing lg="125" md="70" />
 

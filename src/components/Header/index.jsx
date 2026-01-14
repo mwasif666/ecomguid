@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import DropDown from './DropDown';
+// import logo from "../../../public/images/WhatsApp Image 2026-01-13 at 8.00.11 PM.jpeg"
 
 export default function Header({
-  logoUrl,
+  // logoUrl,
   colorVariant,
   cart,
   actionBtnText,
@@ -36,7 +37,7 @@ export default function Header({
           <div className="cs_main_header_in">
             <div className="cs_main_header_left">
               <Link className="cs_site_branding" to="/">
-                <img src={logoUrl} alt="Logo" />
+                <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Logo" />
               </Link>
             </div>
             <div className="cs_main_header_center">

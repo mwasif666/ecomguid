@@ -2,9 +2,9 @@ import { Icon } from '@iconify/react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 const addressDataList = [
-  '5553 Jay Path Apt. 908',
-  '+44 454 7800 112',
-  'info@zivan.net',
+  'Plot No. 340, St. 8, Farooq park, Jaranwala, Faisalabad, 37250',
+  '+92 3236625189',
+  'contact@ecomguild.com',
 ];
 const serviceMenuList = [
   {
@@ -98,7 +98,7 @@ export default function Footer() {
             <div className="col-lg-3 col-sm-6">
               <div className="cs_footer_item">
                 <div className="cs_text_widget">
-                  <img src="/images/logo_white.svg" alt="Logo" />
+                  <img width={"80%"} src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Logo" />
                 </div>
                 <ul className="cs_menu_widget cs_mp0">
                   {addressDataList.map((item, index) => (

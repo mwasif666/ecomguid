@@ -28,15 +28,15 @@ export default function ContactPage() {
               <ul className="cs_mp0 cs_contact_info">
                 <li>
                   <h3 className="cs_fs_29 cs_semibold">Email:</h3>
-                  <p className="mb-0">hello@zivan.com</p>
+                  <p className="mb-0">contact@ecomguild.com</p>
                 </li>
                 <li>
                   <h3 className="cs_fs_29 cs_semibold">Phone:</h3>
-                  <p className="mb-0">+54 45 454 78 23</p>
+                  <p className="mb-0">+92 3236625189</p>
                 </li>
                 <li>
                   <h3 className="cs_fs_29 cs_semibold">Address:</h3>
-                  <p className="mb-0">55/53 Jay Pathshala Apt. 908, USA</p>
+                  <p className="mb-0">Plot No. 340, St. 8, Farooq park, Jaranwala, Faisalabad, 37250</p>
                 </li>
               </ul>
             </div>

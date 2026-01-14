@@ -42,6 +42,9 @@
       margin-bottom: 5px;
     }
   }
+
+
+
   .cs_portfolio_btn {
     display: inline-flex;
     padding-left: 25px;
@@ -80,21 +83,21 @@
   .cs_portfolio_thumb {
     position: absolute;
     height: 100%;
-    width: 80%;
+    width: 100%;
     right: 0;
     top: 0;
     &::before {
-      content: '';
-      background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.9) 0%,
-        rgba(255, 255, 255, 0) 49.95%
-      );
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
+      // content: '';
+      // background: linear-gradient(
+      //   90deg,
+      //   rgba(255, 255, 255, 0.9) 0%,
+      //   rgba(255, 255, 255, 0) 49.95%
+      // );
+      // position: absolute;
+      // left: 0;
+      // top: 0;
+      // height: 100%;
+      // width: 100%;
     }
   }
   .cs_portfolio_minititle {
