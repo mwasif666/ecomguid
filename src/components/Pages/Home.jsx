@@ -19,13 +19,7 @@ import TestimonialSlider from "../Slider/TestimonialSlider";
 import PostCarousel from "../Slider/PostCarousel";
 import { pageTitle } from "../../helpers/PageTitle";
 import ServiceSlider from "../Slider/ServiceSlider";
-
-
-// Images
-import image1 from "../../assets/image_2.jpeg"
-
-
-
+import portfolioDetails from "../../data/portfolioDetails.json";
 // -------------------- DATA --------------------
 const funfactData = [
   { title: "Years of Experience", number: "3+" },
@@ -112,48 +106,14 @@ const portfolioData = [
 
 // ✅ Slider data (tabs: ebay / etsy)
 // NOTE: Local images show best if they are in /public/images/... and you use "/images/...."
-const portfolioSliderData = [
-  {
-    platform: "ebay",
-    thumbnailSrc:
-      image1,
-    // miniTitle: "eBay Store Growth",
-    // title: "Corporate Webly <br />Application",
-    // subTitle:
-    //   "From product research to listing optimization and scaling profitability <br /> with full end-to-end store management.",
-    href: "/portfolioDetail",
-  },
-  {
-    platform: "ebay",
-    thumbnailSrc:
-      "https://png.pngtree.com/thumb_back/fh260/background/20240521/pngtree-world-best-for-mobile-hd-wallpapers-pxfuel-photo-image_15804476.jpg",
-    miniTitle: "Account Optimization",
-    title: "eCommerce User <br />Interface Design",
-    subTitle:
-      "From store setup to order handling and customer support <br /> ensuring growth without your daily time involvement.",
-    href: "/portfolio/portfolio-details",
-  },
-  {
-    platform: "etsy",
-    thumbnailSrc:
-      "https://static.vecteezy.com/system/resources/thumbnails/070/579/927/small_2x/orange-flowers-in-a-field-with-a-blurry-background-photo.jpg",
-    miniTitle: "Etsy Store Scaling",
-    title: "Multi Dimension <br />Two Square",
-    subTitle:
-      "From niche research to keyword strategy and conversion improvements <br /> to help your Etsy shop grow consistently.",
-    href: "/portfolio/portfolio-details",
-  },
-  {
-    platform: "etsy",
-    thumbnailSrc:
-      "https://static.vecteezy.com/system/resources/thumbnails/049/855/414/small/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-free-photo.jpg",
-    miniTitle: "Creative Listing Strategy",
-    title: "Animated Abstract <br />3D Background",
-    subTitle:
-      "From product positioning to brand visuals and shop optimization <br /> to maximize organic sales and repeat buyers.",
-    href: "/portfolio/portfolio-details",
-  },
-];
+const portfolioSliderData = portfolioDetails.map((item) => ({
+  platform: item.platform,
+  thumbnailSrc: item.thumbnailSrc,
+  miniTitle: item.subTitle,
+  title: item.title,
+  subTitle: item.summary?.[0] || "",
+  href: `/portfolio/${item.id}`,
+}));
 
 const awardData = [
   {
@@ -283,19 +243,20 @@ const servideData = [
   {
     iconSrc: "/images/marketing-agency/service_icon_1.svg",
     title: "ebay",
-    subTitle:"We offer end-to-end eBay store management, covering account creation and setup, product research, listing creation & optimization, order processing and fulfillment, customer support, returns & refunds handling, account health management, and performance tracking and reporting.",
+    subTitle:
+      "We offer end-to-end eBay store management, covering account creation and setup, product research, listing creation & optimization, order processing and fulfillment, customer support, returns & refunds handling, account health management, and performance tracking and reporting.",
     // btnText: "See More",
     // btnUrl: "/service/service-details",
   },
   {
     iconSrc: "/images/marketing-agency/service_icon_2.svg",
     title: "Etsy",
-    subTitle:"We offer end-to-end Etsy store management, covering account creation and setup, niche & product research, listing creation & optimization, order processing & fulfillment, customer support, returns & refunds handling, account health management, and performance tracking and reporting.",
+    subTitle:
+      "We offer end-to-end Etsy store management, covering account creation and setup, niche & product research, listing creation & optimization, order processing & fulfillment, customer support, returns & refunds handling, account health management, and performance tracking and reporting.",
     // btnText: "See More",
     // btnUrl: "/service/service-details",
   },
 ];
-
 
 // -------------------- PAGE --------------------
 export default function Home({ darkMode }) {
@@ -328,33 +289,32 @@ export default function Home({ darkMode }) {
 
       <Spacing lg="125" md="70" />
       <About
-  thumbnail="https://ecomexpertspro.com/images/know-about-us-side.png"
-  uperTitle="Who We Are"
-  title="Your End-to-End Ecom Growth Partner"
-  subTitle={
-    <>
-      Ecom Guild helps people build profitable side businesses on e-commerce
-      marketplaces like eBay and Etsy.
-      <br />
-      <br />
-      We are a guild of 20+ professionals who manage everything end to end 
-      product research, listings, orders, customer support, and account management
-       so our partners can earn with minimal time involvement.
-      <br />
-      <br />
-      Our goal is simple: make e-commerce easy, transparent, and accessible for
-      anyone looking to start a side hustle.
-    </>
-  }
-  // featureList={[
-  //   "End-to-end eBay & Etsy store management",
-  //   "Product research, listings, and order fulfillment",
-  //   "Customer support & account optimization",
-  // ]}
-  btnText="Learn More"
-  btnUrl="/about"
-/>
-
+        thumbnail="https://ecomexpertspro.com/images/know-about-us-side.png"
+        uperTitle="Who We Are"
+        title="Your End-to-End Ecom Growth Partner"
+        subTitle={
+          <>
+            Ecom Guild helps people build profitable side businesses on
+            e-commerce marketplaces like eBay and Etsy.
+            <br />
+            <br />
+            We are a guild of 20+ professionals who manage everything end to end
+            product research, listings, orders, customer support, and account
+            management so our partners can earn with minimal time involvement.
+            <br />
+            <br />
+            Our goal is simple: make e-commerce easy, transparent, and
+            accessible for anyone looking to start a side hustle.
+          </>
+        }
+        // featureList={[
+        //   "End-to-end eBay & Etsy store management",
+        //   "Product research, listings, and order fulfillment",
+        //   "Customer support & account optimization",
+        // ]}
+        btnText="Learn More"
+        btnUrl="/about"
+      />
 
       <Spacing lg="125" md="70" />
 
@@ -417,53 +377,6 @@ export default function Home({ darkMode }) {
         <PortfolioSlider data={filteredPortfolioSliderData} />
         <Spacing lg="150" md="80" />
       </section>
-
-      {/* Optional existing portfolio grid */}
-      {/* <section>
-        <Spacing lg="143" md="75" />
-        <div className="container">
-          <SectionHeading title="Some featured work" subTitle="Portfolio" />
-          <Spacing lg="85" md="45" />
-          <Portfolio data={portfolioData} />
-          <Spacing lg="26" md="30" />
-          <div className="text-center">
-            <Button btnText="See All Project" btnUrl="/portfolio" />
-          </div>
-        </div>
-        <Spacing lg="150" md="80" />
-      </section> */}
-
-      {/* <section className="cs_primary_bg cs_shape_animation_2">
-        <Spacing lg="143" md="75" />
-        <div className="cs_shape_1 position-absolute">
-          <svg
-            width={65}
-            height={64}
-            viewBox="0 0 65 64"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g opacity="0.5">
-              <path
-                d="M62.4554 25.9314C55.6838 19.6081 40.1618 12.4752 32.1637 20.1537C41.7609 21.9206 53.2379 29.2392 48.3751 39.1677C45.1712 45.7019 38.7353 45.7177 33.3337 41.995C27.338 37.8739 25.7108 31.2667 27.4596 24.5962C26.5312 24.5866 25.6039 24.6605 24.6889 24.8172C9.80991 27.7447 14.0713 47.6353 20.9187 55.948C22.4528 57.8045 19.7488 60.3159 18.1393 58.4837C7.86403 46.8126 6.49349 23.0691 25.5532 19.9295C26.8892 19.7254 28.2446 19.6801 29.5912 19.7945C36.9845 9.42053 56.5698 17.4866 64.055 24.4366C65.1096 25.4175 63.4831 26.8926 62.4554 25.9314ZM33.9938 39.0327C38.3927 42.4636 44.2429 40.8527 44.3919 34.8698C44.6036 28.2263 35.7464 25.0921 29.1457 24.655C27.1454 29.9313 29.4427 35.4836 33.9938 39.0327Z"
-                fill="#4F4747"
-              />
-            </g>
-          </svg>
-        </div>
-
-        <div className="container">
-          <SectionHeading
-            title="Our prize achievement"
-            subTitle="Awards"
-            variantColor="cs_white_color"
-          />
-          <Spacing lg="85" md="45" />
-          <Award data={awardData} />
-        </div>
-
-        <Spacing lg="150" md="80" />
-      </section> */}
 
       <TestimonialSlider
         layeredImages={[

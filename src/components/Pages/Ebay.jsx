@@ -1,62 +1,22 @@
-import React from 'react';
-import Spacing from '../Spacing';
-import SectionHeadingStyle3 from '../SectionHeading/SectionHeadingStyle3';
-import Portfolio from '../Portfolio';
-import CtaStyle2 from '../Cta/CtaStyle2';
-import { pageTitle } from '../../helpers/PageTitle';
-const portfolioData = [
-  {
-    href: '/portfolio/portfolio-details',
-    imgUrl: '/images/creative-agency/portfolio_1.jpeg',
-    title: 'Awesome colorful artwork',
-    btnText: 'See Project',
-  },
-  {
-    href: '/portfolio/portfolio-details',
-    imgUrl: '/images/creative-agency/portfolio_2.jpeg',
-    title: 'Admin dashboard UI design',
-    btnText: 'See Project',
-  },
-  {
-    href: '/portfolio/portfolio-details',
-    imgUrl: '/images/creative-agency/portfolio_3.jpeg',
-    title: 'Product designing with brand',
-    btnText: 'See Project',
-  },
-  {
-    href: '/portfolio/portfolio-details',
-    imgUrl: '/images/creative-agency/portfolio_4.jpeg',
-    title: 'Kids education website design',
-    btnText: 'See Project',
-  },
-  {
-    href: '/portfolio/portfolio-details',
-    imgUrl: '/images/creative-agency/portfolio_5.jpeg',
-    title: 'Portable device UI/UX design',
-    btnText: 'See Project',
-  },
-  {
-    href: '/portfolio/portfolio-details',
-    imgUrl: '/images/creative-agency/portfolio_6.jpeg',
-    title: 'Social app design for IOS device',
-    btnText: 'See Project',
-  },
-  {
-    href: '/portfolio/portfolio-details',
-    imgUrl: '/images/creative-agency/portfolio_7.jpeg',
-    title: '3d table light lamp rendering',
-    btnText: 'See Project',
-  },
-  {
-    href: '/portfolio/portfolio-details',
-    imgUrl: '/images/creative-agency/portfolio_8.jpeg',
-    title: 'Old telephone 3d new model',
-    btnText: 'See Project',
-  },
-];
+import React from "react";
+import Spacing from "../Spacing";
+import SectionHeadingStyle3 from "../SectionHeading/SectionHeadingStyle3";
+import Portfolio from "../Portfolio";
+import CtaStyle2 from "../Cta/CtaStyle2";
+import { pageTitle } from "../../helpers/PageTitle";
+import portfolioDetails from "../../data/portfolioDetails.json";
+
+const portfolioData = portfolioDetails
+  .filter((item) => item.platform === "ebay")
+  .map((item) => ({
+    href: `/portfolio/${item.id}`,
+    imgUrl: item.thumbnailSrc,
+    title: item.title,
+    btnText: "See Project",
+  }));
 
 export default function PortfolioPage() {
-  pageTitle('Portfolio');
+  pageTitle("Portfolio");
   return (
     <>
       <Spacing lg="70" md="70" />

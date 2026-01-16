@@ -188,7 +188,7 @@ export default function PortfolioStyle2({
           {href ? (
             <Link to={href} style={{ textDecoration: "none" }}>
               <button className="feature_thumbnail_btn" type="button">
-                View more
+                View full Details
                 <span className="btn_icon" aria-hidden="true">
                   {/* simple arrow */}
                   <svg
@@ -217,7 +217,7 @@ export default function PortfolioStyle2({
             </Link>
           ) : (
             <button className="feature_thumbnail_btn" type="button">
-              View more
+              View full Details
               <span className="btn_icon" aria-hidden="true">
                 <svg
                   width="16"

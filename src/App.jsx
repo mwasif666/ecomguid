@@ -65,6 +65,10 @@ function App() {
           <Route path="blog-list" element={<BlogListPage />} />
           <Route path="blog/:blogDetailsId" element={<BlogDetailsPage />} />
           <Route path="portfolio" element={<PortfolioPage />} />
+          <Route
+            path="portfolio/:portfolioDetailsId"
+            element={<PortfolioDetailsPage />}
+          />
           <Route path="portfolioDetail" element={<PortfolioDetailsPage />} />
 
           {/* ✅ Etsy/Ebay fixed routes */}

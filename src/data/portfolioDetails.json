@@ -1,0 +1,99 @@
+﻿[
+  {
+    "id": "muzammil-shaheen",
+    "platform": "ebay",
+    "title": "Muzammil Shaheen",
+    "subTitle": "eBay Store Case Study",
+    "thumbnailSrc": "/images/portfolio/ebay-1.jpeg",
+    "heroImage": "/images/portfolio/ebay-1.jpeg",
+    "facts": [
+      { "label": "Client", "value": "Muzammil Shaheen" },
+      { "label": "Country", "value": "Australia" },
+      { "label": "Investment", "value": "$5k" },
+      { "label": "Per Month Profit", "value": "$2.5k to $5k" },
+      { "label": "Business Model", "value": "Dropshipping" },
+      { "label": "Project Status", "value": "Ongoing" }
+    ],
+    "summary": [
+      "Mr. Muzammil Shaheen started working with us in August 2024. We set up and managed his eBay account from the beginning with an initial investment of $100.",
+      "In the first 3-4 months, the store began making around $1,000 profit per month. After 6-7 months, the profit increased to $2,000-$3,000 per month, with monthly sales of $10,000-$15,000. Some months even reached $5,000 in profit.",
+      "So far, the store has generated $45,000+ in total profit with a total investment of around $5,000. The business is still running strong, following all eBay rules and keeping the account healthy."
+    ],
+    "gallery": [
+      "/images/portfolio/image_3.png",
+      "/images/portfolio/image_4.png"
+    ]
+  },
+  {
+    "id": "saeed-ahmed",
+    "platform": "ebay",
+    "title": "Saeed Ahmed",
+    "subTitle": "eBay Store Case Study",
+    "thumbnailSrc": "/images/portfolio/image_5.jpeg",
+    "heroImage": "/images/portfolio/image_5.jpeg",
+    "facts": [
+      { "label": "Client", "value": "Saeed Ahmed" },
+      { "label": "Country", "value": "Australia" },
+      { "label": "Investment", "value": "$4k" },
+      { "label": "Per Month Profit", "value": "$2.5k to $4k" },
+      { "label": "Business Model", "value": "Dropshipping" },
+      { "label": "Project Status", "value": "Ongoing" }
+    ],
+    "summary": [
+      "Mr. Saeed Ahmed started working with us in February 2025. We set up and managed his eBay account from scratch with an initial investment of $100.",
+      "In the first 3-4 months, the store started generating around $700 in monthly profit. After 6-7 months, profits increased to $2,000-$3,000 per month, with monthly sales of $10,000-$15,000. In some months, profits reached up to $4,000.",
+      "So far, the store has generated $32,000+ in total profit with a total investment of around $4,000, and the business is still running successfully."
+    ],
+    "gallery": [
+      "/images/portfolio/image_6.png",
+      "/images/portfolio/image_7.png"
+    ]
+  },
+  {
+    "id": "ahsan-mahmood",
+    "platform": "ebay",
+    "title": "Ahsan Mahmood",
+    "subTitle": "eBay Store Case Study",
+    "thumbnailSrc": "/images/portfolio/image_8.jpeg",
+    "heroImage": "/images/portfolio/image_8.jpeg",
+    "facts": [
+      { "label": "Client", "value": "Ahsan Mahmood" },
+      { "label": "Country", "value": "Australia and US" },
+      { "label": "Investment", "value": "$4k" },
+      { "label": "Per Month Profit", "value": "$2.5k to $4k" },
+      { "label": "Business Model", "value": "Dropshipping" },
+      { "label": "Project Status", "value": "Ongoing" }
+    ],
+    "summary": [
+      "Mr. Ahsan Mahmood partnered with us in January 2025. We set up and fully managed his eBay store from the ground up with an initial investment of $100.",
+      "Within 3-4 months, the store began generating around $500 in monthly profit. By 6-7 months, profits increased to $2,000-$3,000 per month, supported by $10,000-$15,000 in monthly sales. In stronger months, profits reached up to $4,000.",
+      "To date, the store has generated $33,000+ in total profit with a total investment of approximately $4,000, and the business continues to perform consistently."
+    ],
+    "gallery": [
+      "/images/portfolio/image_9.png",
+      "/images/portfolio/image_10.png"
+    ]
+  },
+  {
+    "id": "sajid-ali",
+    "platform": "ebay",
+    "title": "Sajid Ali",
+    "subTitle": "eBay Store Case Study",
+    "thumbnailSrc": "/images/portfolio/image_11.png",
+    "heroImage": "/images/portfolio/image_11.png",
+    "facts": [
+      { "label": "Client", "value": "Sajid Ali" },
+      { "label": "Country", "value": "Australia and US" },
+      { "label": "Investment", "value": "$4k" },
+      { "label": "Per Month Profit", "value": "$2.5k to $4k" },
+      { "label": "Business Model", "value": "Dropshipping" },
+      { "label": "Project Status", "value": "Ongoing" }
+    ],
+    "summary": [
+      "Mr. Sajid Ali partnered with us in May 2025. We set up and fully managed his eBay store from the ground up with an initial investment of $100.",
+      "Within 3-4 months, the store began generating around $800 in monthly profit. By 6-7 months, profits increased to $2,000-$3,000 per month, supported by $10,000-$15,000 in monthly sales. In stronger months, profits reached up to $4,000.",
+      "To date, the store has generated $27,000+ in total profit with a total investment of approximately $4,000, and the business continues to perform consistently."
+    ],
+    "gallery": ["/images/portfolio/image_12.png"]
+  }
+]
