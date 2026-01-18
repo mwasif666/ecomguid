@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import parse from "html-react-parser";
 import { Link } from "react-router-dom";
 
@@ -15,8 +15,6 @@ export default function PortfolioStyle2({
   subTitle,
   href,
 }) {
-  const [isHover, setIsHover] = useState(false);
-
   return (
     <>
       {/* ✅ Internal CSS */}
@@ -163,11 +161,7 @@ export default function PortfolioStyle2({
         }
       `}</style>
 
-      <div
-        className="cs_portfolio cs_style_2"
-        onMouseEnter={() => setIsHover(true)}
-        onMouseLeave={() => setIsHover(false)}
-      >
+      <div className="cs_portfolio cs_style_2">
         <div
           className="cs_portfolio_thumb cs_bg_filed"
           style={{

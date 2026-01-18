@@ -1,7 +1,6 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
-import IconBox from '../IconBox';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import IconBox from "../IconBox";
 
 export default function ServiceSlider({ data }) {
   return (

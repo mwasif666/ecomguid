@@ -9,14 +9,9 @@ import Spacing from "../Spacing";
 import FunFact from "../FunFact";
 import About from "../About";
 import WhyChose from "../WhyChose";
-import Service from "../Service";
-import Portfolio from "../Portfolio";
-import Button from "../Button";
-import Award from "../Award";
 import Accordion from "../Accordion";
 import Cta from "../Cta";
 import TestimonialSlider from "../Slider/TestimonialSlider";
-import PostCarousel from "../Slider/PostCarousel";
 import { pageTitle } from "../../helpers/PageTitle";
 import ServiceSlider from "../Slider/ServiceSlider";
 import portfolioDetails from "../../data/portfolioDetails.json";
@@ -46,64 +41,6 @@ const whyChoseFeatureData = [
   },
 ];
 
-const serviceListData = [
-  {
-    title: "WP Development",
-    subtitle:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium lorema doloremque laudantium, totam rem aperiam, eaque ipsa quae.",
-    imgUrl: "/images/creative-agency/service_7.jpeg",
-    href: "/service/service-details",
-  },
-  {
-    title: "UI/UX Design",
-    subtitle:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium lorema doloremque laudantium, totam rem aperiam, eaque ipsa quae.",
-    imgUrl: "/images/creative-agency/service_8.jpeg",
-    href: "/service/service-details",
-  },
-  {
-    title: "Branding",
-    subtitle:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium lorema doloremque laudantium, totam rem aperiam, eaque ipsa quae.",
-    imgUrl: "/images/creative-agency/service_9.jpeg",
-    href: "/service/service-details",
-  },
-  {
-    title: "Social Ad Campaign",
-    subtitle:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium lorema doloremque laudantium, totam rem aperiam, eaque ipsa quae.",
-    imgUrl: "/images/creative-agency/service_10.jpeg",
-    href: "/service/service-details",
-  },
-];
-
-const portfolioData = [
-  {
-    href: "/portfolio/portfolio-details",
-    imgUrl: "/images/creative-agency/portfolio_1.jpeg",
-    title: "Awesome colorful artwork",
-    btnText: "See Project",
-  },
-  {
-    href: "/portfolio/portfolio-details",
-    imgUrl: "/images/creative-agency/portfolio_2.jpeg",
-    title: "Admin dashboard UI design",
-    btnText: "See Project",
-  },
-  {
-    href: "/portfolio/portfolio-details",
-    imgUrl: "/images/creative-agency/portfolio_3.jpeg",
-    title: "Product designing with brand",
-    btnText: "See Project",
-  },
-  {
-    href: "/portfolio/portfolio-details",
-    imgUrl: "/images/creative-agency/portfolio_4.jpeg",
-    title: "Kids education website design",
-    btnText: "See Project",
-  },
-];
-
 // ✅ Slider data (tabs: ebay / etsy)
 // NOTE: Local images show best if they are in /public/images/... and you use "/images/...."
 const portfolioSliderData = portfolioDetails.map((item) => ({
@@ -114,33 +51,6 @@ const portfolioSliderData = portfolioDetails.map((item) => ({
   subTitle: item.summary?.[0] || "",
   href: `/portfolio/${item.id}`,
 }));
-
-const awardData = [
-  {
-    brand: "Behance",
-    title: "UI/UX design of the month",
-    subTitle:
-      "Accusamus et iusto odio dignissimos ducimus qui blanditiis fedarals praesentium voluptatum deleniti atque corrupti quos dolores",
-    date: "December 12, 2023",
-    awardImgUrl: "/images/creative-agency/award_img_1.svg",
-  },
-  {
-    brand: "Awwwards",
-    title: "CSS awards design",
-    subTitle:
-      "Accusamus et iusto odio dignissimos ducimus qui blanditiis fedarals praesentium voluptatum deleniti atque corrupti quos dolores",
-    date: "January 05, 2022",
-    awardImgUrl: "/images/creative-agency/award_img_2.svg",
-  },
-  {
-    brand: "Google",
-    title: "Website of the day",
-    subTitle:
-      "Accusamus et iusto odio dignissimos ducimus qui blanditiis fedarals praesentium voluptatum deleniti atque corrupti quos dolores",
-    date: "March 20, 2021",
-    awardImgUrl: "/images/creative-agency/award_img_3.svg",
-  },
-];
 
 const testimonialData = [
   {
@@ -185,57 +95,6 @@ const faqData = [
     title: "05. How can i payment proceed after complete project?",
     content:
       "Marketing eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.",
-  },
-];
-
-const postData = [
-  {
-    thumbnailSrc: "/images/creative-agency/post_1.jpeg",
-    title: "How to keep fear from ruining your art business with confident",
-    date: "07 Mar 2023",
-    url: "/blog/blog-details",
-  },
-  {
-    thumbnailSrc: "/images/creative-agency/post_2.jpeg",
-    title: "Artistic mind will be great for creation anything",
-    date: "22 Apr 2023",
-    url: "/blog/blog-details",
-  },
-  {
-    thumbnailSrc: "/images/creative-agency/post_3.jpeg",
-    title: "AI will take over all job for human within few years",
-    date: "13 May 2023",
-    url: "/blog/blog-details",
-  },
-  {
-    thumbnailSrc: "/images/creative-agency/post_4.jpeg",
-    title: "Your agency need to replace some artistic mind people",
-    date: "15 Mar 2023",
-    url: "/blog/blog-details",
-  },
-  {
-    thumbnailSrc: "/images/creative-agency/post_1.jpeg",
-    title: "How to keep fear from ruining your art business with confident",
-    date: "07 Mar 2023",
-    url: "/blog/blog-details",
-  },
-  {
-    thumbnailSrc: "/images/creative-agency/post_2.jpeg",
-    title: "Artistic mind will be great for creation anything",
-    date: "22 Apr 2023",
-    url: "/portfolio/portfolio-details",
-  },
-  {
-    thumbnailSrc: "/images/creative-agency/post_3.jpeg",
-    title: "AI will take over all job for human within few years",
-    date: "13 May 2023",
-    url: "/portfolio/portfolio-details",
-  },
-  {
-    thumbnailSrc: "/images/creative-agency/post_4.jpeg",
-    title: "Your agency need to replace some artistic mind people",
-    date: "15 Mar 2023",
-    url: "/portfolio/portfolio-details-page",
   },
 ];
 
