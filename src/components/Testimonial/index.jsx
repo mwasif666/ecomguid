@@ -4,8 +4,10 @@ export default function Testimonial({
   text,
   avatarName,
   avatarDesignation,
+  avatarSrc,
   style2,
 }) {
+  const avatarAlt = avatarName ? `${avatarName} photo` : 'Reviewer';
   return (
     <div className={`cs_testimonial cs_style_1 ${style2 ? '' : 'text-center'}`}>
       <div className="cs_testimonial_icon">
@@ -30,6 +32,11 @@ export default function Testimonial({
         {text}
       </blockquote>
       <div className="cs_testimonial_info">
+        {avatarSrc && (
+          <div className="cs_testimonial_avatar">
+            <img src={avatarSrc} alt={avatarAlt} loading="lazy" />
+          </div>
+        )}
         <h3
           className={`cs_semibold ${
             style2 ? 'cs_white_color cs_fs_21' : 'cs_fs_29'

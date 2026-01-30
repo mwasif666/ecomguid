@@ -239,6 +239,7 @@
    Example: /src/assets/css/style.css OR whichever global file is loaded */
 
 .cs_portfolio_tabs {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -247,6 +248,32 @@
   border: 1px solid rgba(255, 255, 255, 0.16);
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
+}
+.cs_portfolio_select {
+  appearance: none;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 10px 42px 10px 18px;
+  cursor: pointer;
+}
+.cs_portfolio_tabs::after {
+  content: '';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid rgba(255, 255, 255, 0.8);
+  pointer-events: none;
 }
 .home-portfolio{
   color: #fd6219 !important;

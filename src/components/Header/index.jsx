@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import DropDown from './DropDown';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import DropDown from "./DropDown";
 // import logo from "../../../public/images/WhatsApp Image 2026-01-13 at 8.00.11 PM.jpeg"
 
 export default function Header({
@@ -20,31 +20,34 @@ export default function Header({
         setIsSticky(false);
       }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     // Cleanup function to remove the event listener
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   return (
     <header
       className={`cs_site_header cs_style_1 cs_sticky_header ${
-        colorVariant ? colorVariant : 'cs_primary_color'
-      } ${isSticky ? 'cs_gescout_show' : ''}`}
+        colorVariant ? colorVariant : "cs_primary_color"
+      } ${isSticky ? "cs_gescout_show" : ""}`}
     >
       <div className="cs_main_header">
         <div className="container">
           <div className="cs_main_header_in">
             <div className="cs_main_header_left">
               <Link className="cs_site_branding" to="/">
-                <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Logo" />
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/logo.png`}
+                  alt="Logo"
+                />
               </Link>
             </div>
             <div className="cs_main_header_center">
               <div className="cs_nav cs_medium cs_primary_font">
                 <ul
                   className={`${
-                    mobileToggle ? 'cs_nav_list cs_active' : 'cs_nav_list'
+                    mobileToggle ? "cs_nav_list cs_active" : "cs_nav_list"
                   }`}
                 >
                   <li className="">
@@ -111,19 +114,33 @@ export default function Header({
                   <li>
                     <Link to="about">About</Link>
                   </li>
-                 <li className="menu-item-has-children">
-  <Link to="/portfolio">Portfolio</Link>
-  <DropDown>
-    <ul>
-      <li>
-        <Link to="ebay">eBay</Link>
-      </li>
-      <li>
-        <Link to="etsy">Etsy</Link>
-      </li>
-    </ul>
-  </DropDown>
-</li>
+                  <li className="menu-item-has-children">
+                    <Link to="/portfolio">Portfolio</Link>
+                    <DropDown>
+                      <ul>
+                        <li>
+                          <Link to="ebay">eBay</Link>
+                        </li>
+                        <li>
+                          <Link to="etsy">Etsy</Link>
+                        </li>
+                      </ul>
+                    </DropDown>
+                  </li>
+
+                  <li className="menu-item-has-children">
+                    <Link to="/service">Services</Link>
+                    <DropDown>
+                      <ul>
+                        <li>
+                          <Link to="service/ebay">eBay</Link>
+                        </li>
+                        <li>
+                          <Link to="service/etsy">Etsy</Link>
+                        </li>
+                      </ul>
+                    </DropDown>
+                  </li>
 
                   {/* <li className="menu-item-has-children">
                     <Link to="blog">Blog</Link>
@@ -199,8 +216,8 @@ export default function Header({
                 <span
                   className={
                     mobileToggle
-                      ? 'cs_menu_toggle cs_teggle_active'
-                      : 'cs_menu_toggle'
+                      ? "cs_menu_toggle cs_teggle_active"
+                      : "cs_menu_toggle"
                   }
                   onClick={() => setMobileToggle(!mobileToggle)}
                 >
@@ -236,7 +253,7 @@ export default function Header({
               <Link
                 to={actionBtnUrl}
                 className={`cs_btn cs_style_1  ${
-                  colorVariant ? 'cs_btn_white' : ''
+                  colorVariant ? "cs_btn_white" : ""
                 }`}
               >
                 {actionBtnText}

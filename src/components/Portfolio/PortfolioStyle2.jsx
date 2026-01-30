@@ -86,7 +86,7 @@ export default function PortfolioStyle2({
           letter-spacing: 0.2px;
 
           color: #fff;
-          background: linear-gradient(135deg, #03a752, #00266f);
+          background: #fd6219;
           box-shadow:
             0 18px 45px rgba(0,0,0,0.35),
             inset 0 0 0 1px rgba(255,255,255,0.18);
@@ -166,7 +166,7 @@ export default function PortfolioStyle2({
           className="cs_portfolio_thumb cs_bg_filed"
           style={{
             backgroundImage: `url(${thumbnailSrc})`,
-            backgroundSize: "cover", // contain chahiye ho to "contain"
+            backgroundSize: "contain", // contain chahiye ho to "contain"
           }}
         />
 

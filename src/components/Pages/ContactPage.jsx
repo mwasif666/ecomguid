@@ -32,7 +32,7 @@ export default function ContactPage() {
                 </li>
                 <li>
                   <h3 className="cs_fs_29 cs_semibold">Phone:</h3>
-                  <p className="mb-0">+92 3236625189</p>
+                  <p className="mb-0">+923236625189</p>
                 </li>
                 <li>
                   <h3 className="cs_fs_29 cs_semibold">Address:</h3>

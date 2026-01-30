@@ -4,12 +4,12 @@ function AccordionItem({ title, content, isOpen, onClick }) {
   const accordionContentRef = useRef(null);
   const [contentHeight, setContentHeight] = useState(0);
 
-  useEffect(() => {
-    if (accordionContentRef.current) {
-      // Measure the content's height and set it dynamically
-      setContentHeight(accordionContentRef.current.offsetHeight);
-    }
-  }, [isOpen]);
+useEffect(() => {
+  if (accordionContentRef.current) {
+    setContentHeight(accordionContentRef.current.scrollHeight);
+  }
+}, [isOpen, content]);
+
 
   const accordionClass = isOpen ? 'cs_accordian active' : 'cs_accordian';
 
@@ -24,9 +24,14 @@ function AccordionItem({ title, content, isOpen, onClick }) {
           className="cs_accordian_body_wrap"
           style={{ height: isOpen ? `${contentHeight}px` : '0' }}
         >
-          <div className="cs_accordian_body" ref={accordionContentRef}>
-            <p>{content}</p>
-          </div>
+         <div className="cs_accordian_body" ref={accordionContentRef}>
+  {typeof content === "string" ? (
+    <div style={{ whiteSpace: "pre-line" }}>{content}</div>
+  ) : (
+    <div>{content}</div>
+  )}
+</div>
+
         </div>
       </div>
     </>

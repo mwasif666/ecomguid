@@ -23,6 +23,19 @@
     }
   }
   .cs_testimonial_info {
+    .cs_testimonial_avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 18px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
     h3 {
       margin-bottom: 5px;
       @media (max-width: 1199px) {
@@ -37,6 +50,14 @@
     }
     p {
       margin: 0;
+    }
+  }
+  &:not(.text-center) {
+    .cs_testimonial_info {
+      .cs_testimonial_avatar {
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
   }
 }

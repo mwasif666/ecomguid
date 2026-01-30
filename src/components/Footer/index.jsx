@@ -3,33 +3,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 const addressDataList = [
   'Plot No. 340, St. 8, Farooq park, Jaranwala, Faisalabad, 37250',
-  '+92 3236625189',
+  '+923236625189',
   'contact@ecomguild.com',
 ];
 const serviceMenuList = [
   {
-    title: 'WP Development',
-    href: '/service/service-details',
+    title: 'eBay Store Management',
+    href: '/service/ebay',
   },
   {
-    title: 'UX Research',
-    href: '/service/service-details',
-  },
-  {
-    title: 'Branding Design',
-    href: '/service/service-details',
-  },
-  {
-    title: 'Front-End Development',
-    href: '/service/service-details',
-  },
-  {
-    title: 'Graphics Design',
-    href: '/service/service-details',
-  },
-  {
-    title: 'Ad Promotion',
-    href: '/service/service-details',
+    title: 'Etsy Store Management',
+    href: '/service/etsy',
   },
 ];
 const LinksMenuList = [
@@ -71,19 +55,11 @@ const policyMenuList = [
 const socialBtnList = [
   {
     icon: 'fa6-brands:linkedin-in',
-    href: '/',
-  },
-  {
-    icon: 'fa6-brands:twitter',
-    href: '/',
-  },
-  {
-    icon: 'fa6-brands:youtube',
-    href: '/',
+    href: 'https://www.linkedin.com/company/ecomguild/',
   },
   {
     icon: 'fa6-brands:facebook-f',
-    href: '/',
+    href: 'https://www.facebook.com/profile.php?id=61570397050992&mibextid=ZbWKwL',
   },
 ];
 export default function Footer() {

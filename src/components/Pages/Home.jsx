@@ -54,48 +54,74 @@ const portfolioSliderData = portfolioDetails.map((item) => ({
 
 const testimonialData = [
   {
-    text: "Zivans Motion Graphics did an excellent job on my video related projects. The motion graphics added an extra layer of polish and really brought the video to life. I highly recommend their high quality services and work.",
-    avatarName: "Ansari Patron",
-    avatarDesignation: "CEO at Delta",
+    text: "This service is perfect if you're looking for a genuine side business. I barely spend 1-2 hours a month, and they take care of listings, customer support, and order fulfillment. The profit-sharing model makes it risk-free, and the results have exceeded my expectations so far. Highly recommended for anyone wanting passive income through eBay.",
+    avatarSrc: "/images/reviews/muzamil.jpeg",
+    avatarName: "Mr. Muzammil Shaheen",
+    avatarDesignation: "Transport Contractor",
   },
   {
-    text: "Zivans Motion Graphics did an excellent job on my video related projects. The motion graphics added an extra layer of polish and really brought the video to life. I highly recommend their high quality services and work.",
-    avatarName: "Jhon Doe",
-    avatarDesignation: "Manager at Delta",
+    text: "Very professional and well-organized service. They guided me step by step and explained both the challenges and the strategy clearly before starting. I appreciate how honest and responsive they are. My eBay account is growing steadily, and I can see real progress in sales and profit. Definitely a reliable team to work with.",
+    avatarSrc: "/images/reviews/sarang.jpeg",
+    avatarName: "Mr. Sarang Siddiqui",
+    avatarDesignation: "MD - Physician",
   },
   {
-    text: "Zivans Motion Graphics did an excellent job on my video related projects. The motion graphics added an extra layer of polish and really brought the video to life. I highly recommend their high quality services and work.",
-    avatarName: "Ramatam Coo",
-    avatarDesignation: "MD at Delta",
+    text: "I had no prior knowledge of e-commerce Etsy, but they made everything simple and easy to understand. There were no false promises, only realistic goals and clear communication. I'm glad I chose them for my Etsy business.",
+    avatarSrc: "/images/reviews/uzair.jpeg",
+    avatarName: "Mr. Uzair Rehman",
+    avatarDesignation: "Sr. Software Engineer",
+  },
+  {
+    text: "Thank God they reached out to me. A simple conversation turned into a real blessing for me as a side income. I had no experience with eBay, but they handled everything professionally and guided me honestly throughout the process. I'm truly grateful for the opportunity and the consistent results I'm seeing. Highly recommended for anyone looking for a genuine side business.",
+    avatarSrc: "/images/reviews/akbar.jpeg",
+    avatarName: "Mr. Akbar Khan",
+    avatarDesignation: "Flight Attendant",
+  },
+  {
+    text: "I started working with them a few months ago, and after seeing consistent results over the first 5 to 6 months, I felt confident enough to open another eBay store using my wife's details. They are now managing both accounts smoothly, and both stores are generating good profits. I'm very satisfied with the results.",
+    avatarSrc: "/images/reviews/zayam.png",
+    avatarName: "Mr. Zayam Mahmood",
+    avatarDesignation: "Chemical Engineer",
   },
 ];
 
 const faqData = [
   {
-    title: "01. I need your services and how can i contact you throw email?",
+    title: "01. Can I start if I don’t have any knowledge of e-commerce or prior business experience?",
     content:
-      "Marketing eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.",
+      "Yes, absolutely. You can start even if you have no previous knowledge or experience. We guide you through every step of the process by clearly explaining the strategy, potential challenges, and how the business operates.",
+  },
+{
+  title: "02. What do I need to create an eBay or Etsy seller account?",
+  content: (
+    <>
+      <p>You will need the following details based on the country you are living in:</p>
+      <ul>
+        <li>A bank account (e.g., PNC or Chase in the US; Westpac or ANZ in Australia)</li>
+        <li>A valid driving license or passport</li>
+        <li>A tax number (SSN in the US, ABN in Australia)</li>
+        <li>A phone number</li>
+        <li>An email address</li>
+      </ul>
+    </>
+  ),
+}
+,
+  {
+    title: "03. Do I need to share my personal details, bank account access, or send any money upfront?",
+    content:
+      "No. We do not ask for your personal details or bank account access, and there are no upfront payments. We only require access to your eBay account to begin working.",
   },
   {
-    title: "02. What are the different types of service we provide?",
+    title: "04. How do I give you access to my account?",
     content:
-      "Marketing eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.",
+      "You can grant us child (sub-user) access to your eBay account. However, we recommend providing main account access via a VPS, as certain actions—such as handling disputes, returns, and refunds—can only be managed effectively through the main account.",
   },
-  {
-    title: "03. What are the different stages of the working process?",
-    content:
-      "Marketing eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.",
-  },
-  {
-    title: "04. What is the difference between direct and digital marketing?",
-    content:
-      "Marketing eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.",
-  },
-  {
-    title: "05. How can i payment proceed after complete project?",
-    content:
-      "Marketing eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.",
-  },
+  // {
+  //   title: "05. How can i payment proceed after complete project?",
+  //   content:
+  //     "Marketing eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.",
+  // },
 ];
 
 const servideData = [
@@ -117,6 +143,7 @@ const servideData = [
   },
 ];
 
+
 // -------------------- PAGE --------------------
 export default function Home({ darkMode }) {
   pageTitle("Zivan");
@@ -131,8 +158,8 @@ export default function Home({ darkMode }) {
   return (
     <>
       <HeroStyle4
-        title="Mastering Digital Realm, Exploring the Dynamic World of Our Digital Studio"
-        subTitle="Our agency offers a comprehensive suite of lots services, including Branding, Advertising, Social marketing, Video making, and Marketing analysis."
+        title="We Built & Scaled a Store for One of Our Clients, Generating $5k per Month in Profit."
+        subTitle="Mr. Hammad, one of our clients, came to us in July 2024 with no prior e-commerce experience. We launched and managed his store with zero upfront fees. Since then, the store has been consistently generating $4k-$5k per month in profit and has achieved over $50k in total profits."
         thumbnailSrc={
           darkMode
             ? "/images/digital-agency/hero_bg_dark.jpeg"
@@ -147,33 +174,27 @@ export default function Home({ darkMode }) {
       </div>
 
       <Spacing lg="125" md="70" />
-      <About
-        thumbnail="https://ecomexpertspro.com/images/know-about-us-side.png"
-        uperTitle="Who We Are"
-        title="Your End-to-End Ecom Growth Partner"
-        subTitle={
-          <>
-            Ecom Guild helps people build profitable side businesses on
-            e-commerce marketplaces like eBay and Etsy.
-            <br />
-            <br />
-            We are a guild of 20+ professionals who manage everything end to end
-            product research, listings, orders, customer support, and account
-            management so our partners can earn with minimal time involvement.
-            <br />
-            <br />
-            Our goal is simple: make e-commerce easy, transparent, and
-            accessible for anyone looking to start a side hustle.
-          </>
-        }
-        // featureList={[
-        //   "End-to-end eBay & Etsy store management",
-        //   "Product research, listings, and order fulfillment",
-        //   "Customer support & account optimization",
-        // ]}
-        btnText="Learn More"
-        btnUrl="/about"
-      />
+ <About
+  thumbnail="https://ecomexpertspro.com/images/know-about-us-side.png"
+  uperTitle="What We Do"
+  title="We Build & Scale Profitable E-Commerce Businesses"
+  subTitle={
+    <>
+      We help people build a profitable side income on platforms like eBay and
+      Etsy with no upfront costs, no prior e-commerce experience, and minimal
+      time involvement, achieving results within 4 to 5 months.
+    </>
+  }
+  featureList={[
+    "No upfront fees",
+    "No prior e-commerce experience required",
+    "Results in 4-5 months with minimal time involvement",
+  ]}
+  btnText="Learn More"
+  btnUrl="/about"
+/>
+
+    
 
       <Spacing lg="125" md="70" />
 
@@ -187,7 +208,7 @@ export default function Home({ darkMode }) {
       <Spacing lg="185" md="75" />
 
       <WhyChose
-        sectionTitle="We have depth of market knowledge"
+        sectionTitle="Smart, Low-Risk Partnership"
         sectionSubTitle="Why Choose Us"
         whyChoseFeatureData={whyChoseFeatureData}
         thumbnailSrc="/images/creative-agency/why_choose_us_img_3.jpeg"
@@ -213,20 +234,15 @@ export default function Home({ darkMode }) {
 
             {/* Right: Tabs */}
             <div className="cs_portfolio_tabs">
-              <button
-                type="button"
-                className={`cs_tab_btn ${activeTab === "ebay" ? "active" : ""}`}
-                onClick={() => setActiveTab("ebay")}
+              <select
+                className="cs_portfolio_select"
+                value={activeTab}
+                onChange={(event) => setActiveTab(event.target.value)}
+                aria-label="Portfolio platform"
               >
-                eBay
-              </button>
-              <button
-                type="button"
-                className={`cs_tab_btn ${activeTab === "etsy" ? "active" : ""}`}
-                onClick={() => setActiveTab("etsy")}
-              >
-                Etsy
-              </button>
+                <option value="ebay">eBay</option>
+                <option value="etsy">Etsy</option>
+              </select>
             </div>
           </div>
 
@@ -238,20 +254,14 @@ export default function Home({ darkMode }) {
       </section>
 
       <TestimonialSlider
-        layeredImages={[
-          "/images/creative-agency/layer_img_1.jpeg",
-          "/images/creative-agency/layer_img_2.jpeg",
-          "/images/creative-agency/layer_img_3.jpeg",
-          "/images/creative-agency/layer_img_4.jpeg",
-          "/images/creative-agency/layer_img_5.jpeg",
-        ]}
+        layeredImages={[]}
         data={testimonialData}
       />
 
       <section>
         <div className="container">
           <Cta
-            title="Is there a specific project or goal that you have in mind?"
+            title="Start Your Journey With Us"
             btnText="Contact Us"
             btnUrl="/contact"
             bgUrl="/images/creative-agency/cta_bg.jpeg"

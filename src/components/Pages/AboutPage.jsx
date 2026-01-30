@@ -3,19 +3,17 @@ import Spacing from '../Spacing';
 import SectionHeadingStyle3 from '../SectionHeading/SectionHeadingStyle3';
 import AboutStyle4 from '../About/AboutStyle4';
 import FunFact from '../FunFact';
-import AboutStyle5 from '../About/AboutStyle5';
-import IconBoxStyle6 from '../IconBox/IconBoxStyle6';
-import SectionHeadingStyle5 from '../SectionHeading/SectionHeadingStyle5';
 import SectionHeading from '../SectionHeading';
 import TeamSlider from '../Slider/TeamSlider';
-import Marquee from '../Marquee';
-import Brands from '../Brands';
+import AboutStyle6 from '../About/AboutStyle6';
+import TestimonialSlider from '../Slider/TestimonialSlider';
+import Cta from '../Cta';
 import { pageTitle } from '../../helpers/PageTitle';
 const funfactData = [
-  { title: 'Happy Customers', number: '22k' },
-  { title: 'Work’s Completed', number: '15k' },
-  { title: 'Skilled Team Members', number: '121' },
-  { title: 'Most Valuable Awards', number: '15' },
+  { title: 'Experience', number: '3+ years' },
+  { title: 'Active Stores Managed', number: '50+' },
+  { title: 'Total Profit Generated', number: '$700K+' },
+  { title: 'Total Sales Generated', number: '$4M+' },
 ];
 const teamData = [
   {
@@ -67,51 +65,47 @@ const teamData = [
     href: '/team/team-details',
   },
 ];
-const brandList = [
+const testimonialData = [
   {
-    logoSrc: '/images/marketing-agency/brand_1.svg',
-    logoAlt: 'Brand',
+    text: "This service is perfect if you're looking for a genuine side business. I barely spend 1-2 hours a month, and they take care of listings, customer support, and order fulfillment. The profit-sharing model makes it risk-free, and the results have exceeded my expectations so far. Highly recommended for anyone wanting passive income through eBay.",
+    avatarSrc: '/images/reviews/muzamil.jpeg',
+    avatarName: 'Mr. Muzammil Shaheen',
+    avatarDesignation: 'Transport Contractor',
   },
   {
-    logoSrc: '/images/marketing-agency/brand_2.svg',
-    logoAlt: 'Brand',
+    text: "Very professional and well-organized service. They guided me step by step and explained both the challenges and the strategy clearly before starting. I appreciate how honest and responsive they are. My eBay account is growing steadily, and I can see real progress in sales and profit. Definitely a reliable team to work with.",
+    avatarSrc: '/images/reviews/sarang.jpeg',
+    avatarName: 'Mr. Sarang Siddiqui',
+    avatarDesignation: 'MD - Physician',
   },
   {
-    logoSrc: '/images/marketing-agency/brand_3.svg',
-    logoAlt: 'Brand',
+    text: "I had no prior knowledge of e-commerce Etsy, but they made everything simple and easy to understand. There were no false promises, only realistic goals and clear communication. I'm glad I chose them for my Etsy business.",
+    avatarSrc: '/images/reviews/uzair.jpeg',
+    avatarName: 'Mr. Uzair Rehman',
+    avatarDesignation: 'Sr. Software Engineer',
   },
   {
-    logoSrc: '/images/marketing-agency/brand_4.svg',
-    logoAlt: 'Brand',
-  },
-];
-const brandListDark = [
-  {
-    logoSrc: '/images/marketing-agency/brand_1_dark.svg',
-    logoAlt: 'Brand',
+    text: "Thank God they reached out to me. A simple conversation turned into a real blessing for me as a side income. I had no experience with eBay, but they handled everything professionally and guided me honestly throughout the process. I'm truly grateful for the opportunity and the consistent results I'm seeing. Highly recommended for anyone looking for a genuine side business.",
+    avatarSrc: '/images/reviews/akbar.jpeg',
+    avatarName: 'Mr. Akbar Khan',
+    avatarDesignation: 'Flight Attendant',
   },
   {
-    logoSrc: '/images/marketing-agency/brand_2_dark.svg',
-    logoAlt: 'Brand',
-  },
-  {
-    logoSrc: '/images/marketing-agency/brand_3_dark.svg',
-    logoAlt: 'Brand',
-  },
-  {
-    logoSrc: '/images/marketing-agency/brand_4_dark.svg',
-    logoAlt: 'Brand',
+    text: "I started working with them a few months ago, and after seeing consistent results over the first 5 to 6 months, I felt confident enough to open another eBay store using my wife's details. They are now managing both accounts smoothly, and both stores are generating good profits. I'm very satisfied with the results.",
+    avatarSrc: '/images/reviews/zayam.png',
+    avatarName: 'Mr. Zayam Mahmood',
+    avatarDesignation: 'Chemical Engineer',
   },
 ];
 
-export default function AboutPage({ darkMode }) {
+export default function AboutPage() {
   pageTitle('About');
   return (
     <>
       <Spacing lg="70" md="70" />
       <Spacing lg="140" md="80" />
       <SectionHeadingStyle3
-        title="Adding value to your business, <br>making it worthy"
+        title="Helping People Generate Side Income Effortlessly"
         subTitle="About Us"
         variant="text-center"
         shape="shape_1"
@@ -119,10 +113,24 @@ export default function AboutPage({ darkMode }) {
       <Spacing lg="75" md="60" />
       <AboutStyle4
         thumbnailSrc="/images/digital-agency/about_1.jpeg"
-        miniTitle="Company Info"
-        title="Marketing agency for your business"
-        subTitle="Our team, specializing in strategic digital marketing, partners with aiming the world's leading brands. Breaking from the norm, we push boundaries and do merge imaginative thinking posible.
-        dolores eos qui ratione voluptatem lipe sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam ever the world lorem ipsum."
+        miniTitle="About Us"
+        title="E-commerce Agency for your Business."
+        subTitle={
+          <>
+            Ecom Guild helps people build profitable side businesses on
+            e-commerce marketplaces like eBay and Etsy.
+            <br />
+            <br />
+            We are a guild of 20+ professionals who manage everything end to
+            end product research, listings, orders, customer support, and
+            account management so our partners can earn with minimal time
+            involvement.
+            <br />
+            <br />
+            Our goal is simple: make e-commerce easy, transparent, and
+            accessible for anyone looking to start a side hustle.
+          </>
+        }
         btnText="See Our Services"
         btnUrl="/service"
       />
@@ -131,74 +139,48 @@ export default function AboutPage({ darkMode }) {
         <FunFact data={funfactData} />
       </div>
       <Spacing lg="125" md="70" />
-      <AboutStyle5
-        variant="cs_type_1"
-        thumbnailSrc="/images/digital-agency/about_2.jpeg"
-        miniTitle="What We Do"
-        title="Best value service provider agency"
-        subTitle="We make specializing in strategic digital marketing, partners with aiming the world's leading brands. Breaking from the norm, we push boundaries and do merge imaginative thinking posible dolores."
-        progressBarList={[
-          { title: 'Digital Marketing', percentage: '75' },
-          { title: 'Brand Strategy', percentage: '85' },
-          { title: 'Competitor Analysis', percentage: '95' },
+      <AboutStyle6
+        thumbnailSrc="/images/portfolio/ebay-2.jpg"
+        title="We Build & Scale Profitable E-Commerce Businesses"
+        subTitle="We help people build a profitable side income on platforms like eBay and Etsy with no upfront costs, no prior e-commerce experience, and minimal time involvement, achieving results within 4 to 5 months."
+        featureList={[
+          'No upfront fees',
+          'No prior e-commerce experience required',
+          'Results in 4-5 months with minimal time involvement',
+          'End-to-end eBay & Etsy store management',
         ]}
-        salesTitle="Sales Increase"
-        groth="25"
+        btnText="See Our Services"
+        btnUrl="/service"
       />
       <Spacing lg="150" md="80" />
-      <section className="cs_primary_bg">
-        <Spacing lg="140" md="70" />
-        <div className="container">
-          <SectionHeadingStyle5 title="How we work" />
-          <Spacing lg="85" md="45" />
-          <div className="cs_working_process_wrap cs_center">
-            <div className="cs_working_process">
-              <div className="cs_working_process_col">
-                <IconBoxStyle6
-                  bgSrc="/images/others/process_1.png"
-                  iconSrc="/images/icons/search.svg"
-                  title="Research"
-                  subTitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem own disilope accusantium doloremque laudantium, totam remen."
-                />
-              </div>
-              <div className="cs_working_process_col">
-                <IconBoxStyle6
-                  bgSrc="/images/others/process_2.png"
-                  iconSrc="/images/icons/idea.svg"
-                  title="Idea Generate"
-                  subTitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem own disilope accusantium doloremque laudantium, totam remen."
-                />
-              </div>
-              <div className="cs_working_process_col">
-                <IconBoxStyle6
-                  bgSrc="/images/others/process_3.png"
-                  iconSrc="/images/icons/gear.svg"
-                  title="Implement"
-                  subTitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem own disilope accusantium doloremque laudantium, totam remen."
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <Spacing lg="150" md="80" />
-      </section>
       <section className="cs_p76_full_width">
         <Spacing lg="143" md="75" />
         <div className="container">
           <SectionHeading
-            title="Meet our experts team behind <br />the zivan agency"
+            title="Meet Our Guild"
             subTitle="Our Team"
           />
           <Spacing lg="85" md="45" />
         </div>
         <TeamSlider data={teamData} />
       </section>
-      <Spacing lg="135" md="70" />
-      <Marquee text="We Create Design - Build App - Website - Branding - SEO" />
-      <Spacing lg="84" md="50" />
+      <Spacing lg="150" md="80" />
       <div className="container">
-        <Brands data={darkMode ? brandListDark : brandList} />
+        <SectionHeading title="Reviews from our clients" subTitle="Reviews" />
+        <Spacing lg="85" md="45" />
       </div>
+      <TestimonialSlider layeredImages={[]} data={testimonialData} />
+      <Spacing lg="150" md="80" />
+      <section>
+        <div className="container">
+          <Cta
+            title="Start Your Journey With Us"
+            btnText="Contact Us"
+            btnUrl="/contact"
+            bgUrl="/images/creative-agency/cta_bg.jpeg"
+          />
+        </div>
+      </section>
       <Spacing lg="135" md="80" />
     </>
   );
