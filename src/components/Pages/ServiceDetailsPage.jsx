@@ -1,10 +1,13 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { Icon } from '@iconify/react';
+import Cta from "../Cta";
+
+
 import Spacing from '../Spacing';
 import SectionHeadingStyle3 from '../SectionHeading/SectionHeadingStyle3';
 import CtaStyle2 from '../Cta/CtaStyle2';
 import AboutStyle6 from '../About/AboutStyle6';
-import CardStyle3 from '../Card/CardStyle3';
 import { pageTitle } from '../../helpers/PageTitle';
 
 export default function ServiceDetailsPage() {
@@ -19,6 +22,9 @@ export default function ServiceDetailsPage() {
       title: 'eBay Store Management',
       subTitle: 'Service Details',
       heroImage: '/images/portfolio/ebay-4.jpg',
+      itemsHeading: 'Everything your store needs to grow—handled for you',
+      itemsDescription:
+        'From store setup and product research to order processing, customer support, and account health tracking, we manage the full operation so your store runs smoothly and grows consistently.',
       items: [
         'Account Creation and Setup',
         'Product Research',
@@ -48,6 +54,9 @@ export default function ServiceDetailsPage() {
       title: 'Etsy Store Management',
       subTitle: 'Service Details',
       heroImage: '/images/portfolio/etsy-1.jpg',
+      itemsHeading: 'Everything your store needs to grow—handled for you',
+      itemsDescription:
+        'From shop setup and niche research to order processing, customer support, and performance tracking, we manage the end-to-end workflow so you can focus on outcomes—not daily operations.',
       items: [
         'Account Creation and Setup',
         'Niche & Product Research',
@@ -75,10 +84,10 @@ export default function ServiceDetailsPage() {
     },
   };
 
-  const selectedService =
-    serviceContent[serviceKey] || serviceContent.ebay;
+  const selectedService = serviceContent[serviceKey] || serviceContent.ebay;
 
   pageTitle(selectedService.title);
+
   return (
     <>
       <Spacing lg="70" md="70" />
@@ -89,43 +98,65 @@ export default function ServiceDetailsPage() {
         shape="shape_3"
       />
       <Spacing lg="75" md="60" />
+
       <div className="cs_service_info">
         <div className="container">
           <div className="row align-items-center cs_gap_y_40">
-              <div className="col-lg-6">
-                <div
-                  className="cs_service_info_thumb cs_bg_filed"
-                  style={{
-                    backgroundImage: `url(${selectedService.heroImage})`,
-                  }}
-                />
+            <div className="col-lg-6">
+              <div
+                className="cs_service_info_thumb cs_bg_filed"
+                style={{
+                  backgroundImage: `url(${selectedService.heroImage})`,
+                }}
+              />
+            </div>
+
+            <div className="col-lg-6 texxt">
+              <div className="cs_service_points_head">
+                <h2 className="cs_service_points_title">
+                  {selectedService.itemsHeading}
+                </h2>
+                <p className="cs_service_points_desc">
+                  {selectedService.itemsDescription}
+                </p>
               </div>
-              <div className="col-lg-6">
-                <div className="row cs_gap_y_40">
-                  {selectedService.items.map((item, index) => (
-                    <div className="col-sm-6" key={item}>
-                      <CardStyle3
-                        number={`${index + 1}`.padStart(2, '0')}
-                        title={item}
-                        subTitle={null}
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
+
+              {/* ✅ Simple LI with Iconify icon */}
+              <ul className="cs_tick_list">
+                {selectedService.items.map((item) => (
+                  <li className="cs_tick_item" key={item}>
+                    <Icon className="cs_tick_icon" icon="fa6-regular:circle-check" />
+                    <span className="cs_tick_text">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
+      </div>
+
       <Spacing lg="150" md="80" />
       <AboutStyle6 {...selectedService.about} />
       <Spacing lg="150" md="80" />
-      <div className="cs_height_140 cs_height_lg_70" />
+
+      {/* <div className="cs_height_140 cs_height_lg_70" />
       <CtaStyle2
         title="Is there a specific project or goal <br />that you have in mind?"
         btnText="Send Message"
         btnUrl="/contact"
       />
-      <div className="cs_height_150 cs_height_lg_80" />
+      <div className="cs_height_150 cs_height_lg_80" /> */}
+
+      <section>
+              <div className="container">
+                <Cta
+                  title="Start Your Journey With Us"
+                  btnText="Contact Us"
+                  btnUrl="/contact"
+                  bgUrl="/images/creative-agency/cta_bg.jpeg"
+                />
+              </div>
+            </section>
     </>
   );
 }
