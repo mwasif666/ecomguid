@@ -337,3 +337,57 @@
   }
 }
 
+// Ebay store management
+.cs_tick_icon{
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 34px;
+
+  // background: rgba(201, 14, 14, 0.788);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.95);
+}
+
+.cs_tick_icon svg{
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.cs_tick_list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.cs_tick_item{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cs_tick_icon{
+  font-size: 22px; /* icon size */
+  flex: 0 0 auto;
+  opacity: 0.95;
+}
+
+.cs_tick_text{
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+.cs_bg_filed {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.texxt{
+  padding-left: 134px;
+}
