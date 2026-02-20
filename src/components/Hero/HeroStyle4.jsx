@@ -1,6 +1,4 @@
 import React from "react";
-// import ImageWaveBlock from "../ImageWaveBlock";
-import ImageWaveBlock from "../VideoModal";
 
 export default function HeroStyle4({ bgUrl, thumbnailSrc, title, subTitle }) {
   return (
@@ -11,15 +9,15 @@ export default function HeroStyle4({ bgUrl, thumbnailSrc, title, subTitle }) {
       }}
     >
       <div className="container">
-        <div className="cs_hero_text position-relative">
-          <h1 className="cs_hero_title cs_fs_68">{title}</h1>
-        </div>
-
-        <div className="row align-items-center">
-          <div className="col-lg-5">
+        <div className="row">
+          <div className="col-lg-6 align-items-center">
             <div className="cs_hero_subtitle">
+              <h1 className="cs_hero_title">{title}</h1>
               <p className="mb-0">{subTitle}</p>
-              <a href="#service" className="cs_down_btn cs_center cs_primary_color">
+              {/* <a
+                href="#service"
+                className="cs_down_btn cs_center cs_primary_color"
+              >
                 <svg
                   width={8}
                   height={33}
@@ -32,22 +30,23 @@ export default function HeroStyle4({ bgUrl, thumbnailSrc, title, subTitle }) {
                     fill="currentColor"
                   />
                 </svg>
-              </a>
+              </a> */}
             </div>
           </div>
-
-          <div className="col-lg-7">
-            <ImageWaveBlock
-              bgUrl={bgUrl}
-              // icon optional:
-              showIcon={true}
-              // click optional (agar aap chaho kuch open ho):
-              onClick={() => {
-                // e.g. open image in new tab OR open your own modal
-                // window.open(bgUrl, "_blank");
-              }}
+          <div className="col-lg-6">
+            <img
+              src={bgUrl}
+              alt="Hero Background"
+              className="w-100 h-100 object-fit-cover"
             />
           </div>
+        </div>
+        <div className="cs_hero_text position-relative"></div>
+
+        <div className="row align-items-center">
+          <div className="col-lg-5"></div>
+
+          <div className="col-lg-7"></div>
         </div>
       </div>
 

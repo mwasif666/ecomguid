@@ -87,28 +87,35 @@ const testimonialData = [
 
 const faqData = [
   {
-    title: "01. Can I start if I don’t have any knowledge of e-commerce or prior business experience?",
+    title:
+      "01. Can I start if I don’t have any knowledge of e-commerce or prior business experience?",
     content:
       "Yes, absolutely. You can start even if you have no previous knowledge or experience. We guide you through every step of the process by clearly explaining the strategy, potential challenges, and how the business operates.",
   },
-{
-  title: "02. What do I need to create an eBay or Etsy seller account?",
-  content: (
-    <>
-      <p>You will need the following details based on the country you are living in:</p>
-      <ul>
-        <li>A bank account (e.g., PNC or Chase in the US; Westpac or ANZ in Australia)</li>
-        <li>A valid driving license or passport</li>
-        <li>A tax number (SSN in the US, ABN in Australia)</li>
-        <li>A phone number</li>
-        <li>An email address</li>
-      </ul>
-    </>
-  ),
-}
-,
   {
-    title: "03. Do I need to share my personal details, bank account access, or send any money upfront?",
+    title: "02. What do I need to create an eBay or Etsy seller account?",
+    content: (
+      <>
+        <p>
+          You will need the following details based on the country you are
+          living in:
+        </p>
+        <ul>
+          <li>
+            A bank account (e.g., PNC or Chase in the US; Westpac or ANZ in
+            Australia)
+          </li>
+          <li>A valid driving license or passport</li>
+          <li>A tax number (SSN in the US, ABN in Australia)</li>
+          <li>A phone number</li>
+          <li>An email address</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    title:
+      "03. Do I need to share my personal details, bank account access, or send any money upfront?",
     content:
       "No. We do not ask for your personal details or bank account access, and there are no upfront payments. We only require access to your eBay account to begin working.",
   },
@@ -143,7 +150,6 @@ const servideData = [
   },
 ];
 
-
 // -------------------- PAGE --------------------
 export default function Home({ darkMode }) {
   pageTitle("Zivan");
@@ -158,14 +164,14 @@ export default function Home({ darkMode }) {
   return (
     <>
       <HeroStyle4
-        title="We Built & Scaled a Store for One of Our Clients, Generating $5k per Month in Profit."
+        title="We Built & Scaled a Store for One of Our Clients."
         subTitle="Mr. Hammad, one of our clients, came to us in July 2024 with no prior e-commerce experience. We launched and managed his store with zero upfront fees. Since then, the store has been consistently generating $4k-$5k per month in profit and has achieved over $50k in total profits."
         thumbnailSrc={
           darkMode
             ? "/images/digital-agency/hero_bg_dark.jpeg"
             : "/images/digital-agency/hero_bg_dark.jpeg"
         }
-        bgUrl="https://static.vecteezy.com/system/resources/thumbnails/049/855/871/small/stunning-high-resolution-nature-and-landscape-backgrounds-breathtaking-scenery-in-hd-photo.jpg"
+        bgUrl="https://res.cloudinary.com/dr0pxq6py/image/upload/v1771582016/31a66bfb-aa52-4d06-9326-65cf47bd94c3_removalai_preview_zosqqh.png"
       />
 
       <Spacing lg="125" md="70" />
@@ -174,27 +180,25 @@ export default function Home({ darkMode }) {
       </div>
 
       <Spacing lg="125" md="70" />
- <About
-  thumbnail="https://ecomexpertspro.com/images/know-about-us-side.png"
-  uperTitle="What We Do"
-  title="We Build & Scale Profitable E-Commerce Businesses"
-  subTitle={
-    <>
-      We help people build a profitable side income on platforms like eBay and
-      Etsy with no upfront costs, no prior e-commerce experience, and minimal
-      time involvement, achieving results within 4 to 5 months.
-    </>
-  }
-  featureList={[
-    "No upfront fees",
-    "No prior e-commerce experience required",
-    "Results in 4-5 months with minimal time involvement",
-  ]}
-  btnText="Learn More"
-  btnUrl="/about"
-/>
-
-    
+      <About
+        thumbnail="https://ecomexpertspro.com/images/know-about-us-side.png"
+        uperTitle="What We Do"
+        title="We Build & Scale Profitable E-Commerce Businesses"
+        subTitle={
+          <>
+            We help people build a profitable side income on platforms like eBay
+            and Etsy with no upfront costs, no prior e-commerce experience, and
+            minimal time involvement, achieving results within 4 to 5 months.
+          </>
+        }
+        featureList={[
+          "No upfront fees",
+          "No prior e-commerce experience required",
+          "Results in 4-5 months with minimal time involvement",
+        ]}
+        btnText="Learn More"
+        btnUrl="/about"
+      />
 
       <Spacing lg="125" md="70" />
 
@@ -253,10 +257,7 @@ export default function Home({ darkMode }) {
         <Spacing lg="150" md="80" />
       </section>
 
-      <TestimonialSlider
-        layeredImages={[]}
-        data={testimonialData}
-      />
+      <TestimonialSlider layeredImages={[]} data={testimonialData} />
 
       <section>
         <div className="container">

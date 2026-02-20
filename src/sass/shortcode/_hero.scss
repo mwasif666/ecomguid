@@ -36,7 +36,7 @@
 
   .cs_video_block_wrap {
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       height: 50%;
       width: 100%;
@@ -90,7 +90,7 @@
   padding: 186px 0 100px;
   position: relative;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     height: 440px;
     width: 440px;
@@ -154,7 +154,7 @@
     align-items: center;
     justify-content: flex-end;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       height: 1px;
       background-color: currentColor;
@@ -251,7 +251,7 @@
     height: 376px;
   }
   .cs_hero_title {
-    margin-bottom: 67px;
+    // margin-bottom: 67px;
     @media (max-width: 991px) {
       margin-bottom: 35px;
     }
@@ -369,7 +369,8 @@
 }
 /* ANIMATIONS */
 .cs_hero_shape_1 {
-  animation: animateBubble 25s linear infinite,
+  animation:
+    animateBubble 25s linear infinite,
     sideWays 2s ease-in-out infinite alternate;
   left: -5%;
   top: 5%;
@@ -377,7 +378,8 @@
 }
 
 .cs_hero_shape_2 {
-  animation: animateBubble 20s linear infinite,
+  animation:
+    animateBubble 20s linear infinite,
     sideWays 4s ease-in-out infinite alternate;
   left: 5%;
   top: 80%;
@@ -385,7 +387,8 @@
 }
 
 .cs_hero_shape_3 {
-  animation: animateBubble 28s linear infinite,
+  animation:
+    animateBubble 28s linear infinite,
     sideWays 2s ease-in-out infinite alternate;
   left: 10%;
   top: 40%;
@@ -393,7 +396,8 @@
 }
 
 .cs_hero_shape_4 {
-  animation: animateBubble 22s linear infinite,
+  animation:
+    animateBubble 22s linear infinite,
     sideWays 3s ease-in-out infinite alternate;
   left: 20%;
   top: 0;
@@ -401,7 +405,8 @@
 }
 
 .cs_hero_shape_5 {
-  animation: animateBubble 29s linear infinite,
+  animation:
+    animateBubble 29s linear infinite,
     sideWays 4s ease-in-out infinite alternate;
   left: 30%;
   top: 50%;
@@ -409,7 +414,8 @@
 }
 
 .cs_hero_shape_6 {
-  animation: animateBubble 21s linear infinite,
+  animation:
+    animateBubble 21s linear infinite,
     sideWays 2s ease-in-out infinite alternate;
   left: 50%;
   top: 0;
@@ -417,7 +423,8 @@
 }
 
 .cs_hero_shape_7 {
-  animation: animateBubble 20s linear infinite,
+  animation:
+    animateBubble 20s linear infinite,
     sideWays 2s ease-in-out infinite alternate;
   left: 65%;
   top: 70%;
@@ -425,7 +432,8 @@
 }
 
 .cs_hero_shape_8 {
-  animation: animateBubble 22s linear infinite,
+  animation:
+    animateBubble 22s linear infinite,
     sideWays 3s ease-in-out infinite alternate;
   left: 80%;
   top: 10%;
@@ -433,7 +441,8 @@
 }
 
 .cs_hero_shape_9 {
-  animation: animateBubble 29s linear infinite,
+  animation:
+    animateBubble 29s linear infinite,
     sideWays 4s ease-in-out infinite alternate;
   left: 90%;
   top: 50%;
@@ -441,7 +450,8 @@
 }
 
 .cs_hero_shape_10 {
-  animation: animateBubble 26s linear infinite,
+  animation:
+    animateBubble 26s linear infinite,
     sideWays 2s ease-in-out infinite alternate;
   left: 80%;
   top: 80%;
@@ -506,7 +516,7 @@
     margin-right: auto;
     margin-top: 10%;
     &:before {
-      content: '';
+      content: "";
       height: 5px;
       width: 5px;
       border-radius: 50%;
@@ -525,7 +535,7 @@
     padding-bottom: 10px;
     &::before,
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       height: 8px;
       width: 8px;
