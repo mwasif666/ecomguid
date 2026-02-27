@@ -176,7 +176,7 @@ export default function AboutPage() {
         <FunFact data={funfactData} />
       </div>
       <Spacing lg="125" md="70" />
-      <AboutStyle6
+      {/* <AboutStyle6
         thumbnailSrc="https://wpexperts.io/wp-content/uploads/2022/06/wp-experts-new-blogs_Profitable-Ecommerce-Business-Ideas-Thatll-Earn-You-High-Revenues-in-2022.svg"
         title="We Build & Scale Profitable E-Commerce Businesses"
         subTitle="We help people build a profitable side income on platforms like eBay and Etsy with no upfront costs, no prior e-commerce experience, and minimal time involvement, achieving results within 4 to 5 months."
@@ -188,8 +188,8 @@ export default function AboutPage() {
         ]}
         btnText="See Our Services"
         btnUrl="/service"
-      />
-      <Spacing lg="150" md="80" />
+      /> */}
+      {/* <Spacing lg="150" md="80" /> */}
       <section className="cs_p76_full_width">
         <Spacing lg="143" md="75" />
         <div className="container">
@@ -198,7 +198,7 @@ export default function AboutPage() {
         </div>
         <TeamSlider data={teamData} />
       </section>
-      <Spacing lg="150" md="80" />
+      {/* <Spacing lg="150" md="80" /> */}
       <TestimonialSlider layeredImages={[]} data={testimonialData} />
       <Spacing lg="150" md="80" />
       <section>
