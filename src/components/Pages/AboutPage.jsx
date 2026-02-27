@@ -17,51 +17,75 @@ const funfactData = [
 ];
 const teamData = [
   {
-    memberImg: '/images/studio-agency/team_1.jpeg',
-    memberName: 'James Berline',
-    memberDesignation: 'React Developer',
+    memberImg: 'https://res.cloudinary.com/dr0pxq6py/image/upload/v1772185140/1_Name_M_Rowyfa_Khan_CEO_Founder_qxfir3.png',
+    memberName: 'Muhammad Rowyfa Khan',
+    memberDesignation: 'CEO Founder',
     href: '/team/team-details',
   },
   {
-    memberImg: '/images/studio-agency/team_2.jpeg',
-    memberName: 'Bella Zubena',
-    memberDesignation: 'Graphic Designer',
+    memberImg: 'https://res.cloudinary.com/dr0pxq6py/image/upload/v1772185140/2_Name_Ali_Raza_Ebay_Team_Lead_ll0m3v.png',
+    memberName: 'Ali Raza',
+    memberDesignation: 'Ebay Team Lead',
     href: '/team/team-details',
   },
   {
-    memberImg: '/images/studio-agency/team_3.jpeg',
-    memberName: 'Kemnei Alekzend',
-    memberDesignation: 'Digital Marketer',
+    memberImg: 'https://res.cloudinary.com/dr0pxq6py/image/upload/v1772185140/3_Ali_Haider_Ebay_Specialist_jlzuhq.png',
+    memberName: 'Ali Haider',
+    memberDesignation: 'Ebay Specialist',
     href: '/team/team-details',
   },
   {
-    memberImg: '/images/studio-agency/team_4.jpeg',
-    memberName: 'Juliya Jesmine',
-    memberDesignation: 'UX Researcher',
+    memberImg: 'https://res.cloudinary.com/dr0pxq6py/image/upload/v1772185140/4_Nouman_Muavia_Ebay_Specialist_tgezvp.png',
+    memberName: 'Noman Muavia',
+    memberDesignation: 'Ebay Specialist',
     href: '/team/team-details',
   },
   {
-    memberImg: '/images/studio-agency/team_1.jpeg',
-    memberName: 'James Berline',
-    memberDesignation: 'React Developer',
+    memberImg: 'https://res.cloudinary.com/dr0pxq6py/image/upload/v1772185140/5_M_Muzammil_Ebay_Specialist_jaraao.png',
+    memberName: 'M.Muzzamil',
+    memberDesignation: 'Ebay Specialist',
     href: '/team/team-details',
   },
   {
-    memberImg: '/images/studio-agency/team_2.jpeg',
-    memberName: 'Bella Zubena',
-    memberDesignation: 'Graphic Designer',
+    memberImg: 'https://res.cloudinary.com/dr0pxq6py/image/upload/v1772185142/6_Ali_Akbar_Etsy_Specialist_pd99vr.png',
+    memberName: 'Ali Akbar',
+    memberDesignation: 'Etsy Specialist',
     href: '/team/team-details',
   },
   {
-    memberImg: '/images/studio-agency/team_3.jpeg',
-    memberName: 'Kemnei Alekzend',
-    memberDesignation: 'Digital Marketer',
+    memberImg: 'https://res.cloudinary.com/dr0pxq6py/image/upload/v1772185141/7_Ali_Hamza_Etsy_Specialist_avft3r.png',
+    memberName: 'Ali Hamza',
+    memberDesignation: 'Etsy Specialist',
     href: '/team/team-details',
   },
   {
-    memberImg: '/images/studio-agency/team_4.jpeg',
-    memberName: 'Juliya Jesmine',
-    memberDesignation: 'UX Researcher',
+    memberImg: 'https://res.cloudinary.com/dr0pxq6py/image/upload/v1772185140/8_Saqlain_Raza_Etsy_Specialist_nedqyp.png',
+    memberName: 'Saqlain Raza',
+    memberDesignation: 'Etsy Specialist',
+    href: '/team/team-details',
+  },
+    {
+    memberImg: 'https://res.cloudinary.com/dr0pxq6py/image/upload/v1772185142/9_Junaid_Khan_Etsy_Specialist_idblzu.png',
+    memberName: 'Junaid Khan',
+    memberDesignation: 'Etsy Specialist',
+    href: '/team/team-details',
+  },
+      {
+    memberImg: 'https://res.cloudinary.com/dr0pxq6py/image/upload/v1772185141/10_Ukasha_Khan_Etsy_Specialist_oyvlr7.png',
+    memberName: 'Ukasha Khan',
+    memberDesignation: 'Etsy Specialist',
+    href: '/team/team-details',
+  },
+       {
+    memberImg: 'https://cdn.vectorstock.com/i/500p/82/65/person-gray-photo-placeholder-woman-vector-24138265.jpg',
+    memberName: 'Munazza Batool',
+    memberDesignation: 'Etsy Specialist',
+    href: '/team/team-details',
+  },
+       {
+    memberImg: 'https://cdn.vectorstock.com/i/500p/82/65/person-gray-photo-placeholder-woman-vector-24138265.jpg',
+    memberName: 'Kanwal Awan',
+    memberDesignation: 'Etsy Team Lead',
     href: '/team/team-details',
   },
 ];
@@ -112,7 +136,7 @@ export default function AboutPage() {
       />
       <Spacing lg="75" md="60" />
       <AboutStyle4
-        thumbnailSrc="/images/digital-agency/about_1.jpeg"
+        thumbnailSrc="https://res.cloudinary.com/dr0pxq6py/image/upload/v1771699764/WhatsApp_Image_2026-02-21_at_23.48.36_czmwah.jpg"
         miniTitle="About Us"
         title="E-commerce Agency for your Business."
         insideContainer
