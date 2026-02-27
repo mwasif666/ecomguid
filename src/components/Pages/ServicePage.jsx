@@ -1,30 +1,30 @@
-import React from 'react';
-import Spacing from '../Spacing';
-import SectionHeadingStyle3 from '../SectionHeading/SectionHeadingStyle3';
-import ServiceStyle2 from '../Service/ServiceStyle2';
-import CtaStyle2 from '../Cta/CtaStyle2';
-import { pageTitle } from '../../helpers/PageTitle';
+import React from "react";
+import Spacing from "../Spacing";
+import SectionHeadingStyle3 from "../SectionHeading/SectionHeadingStyle3";
+import ServiceStyle2 from "../Service/ServiceStyle2";
+import CtaStyle2 from "../Cta/CtaStyle2";
+import { pageTitle } from "../../helpers/PageTitle";
 const serviceData = [
   {
-    number: '01',
-    title: 'eBay Store Management',
+    number: "01",
+    title: "eBay Store Management",
     subTitle:
-      'We offer end-to-end eBay store management, covering account setup, product research, listing optimization, order processing, support, and reporting.',
-    thumbnailSrc: '/images/portfolio/ebay-1.jpeg',
-    href: '/service/ebay',
+      "We offer end-to-end eBay store management, covering account setup, product research, listing optimization, order processing, support, and reporting.",
+    thumbnailSrc: "/images/portfolio/ebay-1.jpeg",
+    href: "/service/ebay",
   },
   {
-    number: '02',
-    title: 'Etsy Store Management',
+    number: "02",
+    title: "Etsy Store Management",
     subTitle:
-      'We offer end-to-end Etsy store management, covering niche research, listing optimization, order fulfillment, support, and reporting.',
-    thumbnailSrc: '/images/portfolio/etsy-1.jpg',
-    href: '/service/etsy',
+      "We offer end-to-end Etsy store management, covering niche research, listing optimization, order fulfillment, support, and reporting.",
+    thumbnailSrc: "/images/portfolio/etsy-1.jpg",
+    href: "/service/etsy",
   },
 ];
 
 export default function ServicePage() {
-  pageTitle('Service');
+  pageTitle("Service");
   return (
     <>
       <Spacing lg="70" md="70" />

@@ -10,10 +10,13 @@ export default function AboutStyle4({
   btnText,
   btnUrl,
   insideContainer,
+  removeShine,
 }) {
   return (
     <div
-      className={`cs_about cs_style_1 ${insideContainer ? 'cs_inside_container' : ''}`}
+      className={`cs_about cs_style_1 ${
+        insideContainer ? 'cs_inside_container' : ''
+      } ${removeShine ? 'cs_no_shine' : ''}`}
     >
       <div className="container">
         <div className="row align-items-center cs_gap_y_40">

@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import Spacing from "../Spacing";
 import SectionHeadingStyle3 from "../SectionHeading/SectionHeadingStyle3";
 import Portfolio from "../Portfolio";
 import TestimonialSlider from "../Slider/TestimonialSlider";
-import SectionHeading from "../SectionHeading";
 import CtaStyle2 from "../Cta/CtaStyle2";
 import { pageTitle } from "../../helpers/PageTitle";
 import portfolioDetails from "../../data/portfolioDetails.json";
 
 const portfolioData = portfolioDetails.map((item) => ({
+  platform: item.platform,
   href: `/portfolio/${item.id}`,
   imgUrl: item.thumbnailSrc,
   title: item.title,
@@ -49,6 +49,12 @@ const testimonialData = [
 
 export default function PortfolioPage() {
   pageTitle("Portfolio");
+  const [activeTab, setActiveTab] = useState("all");
+  const filteredPortfolioData = useMemo(() => {
+    if (activeTab === "all") return portfolioData;
+    return portfolioData.filter((item) => item.platform === activeTab);
+  }, [activeTab]);
+
   return (
     <>
       <Spacing lg="70" md="70" />
@@ -60,11 +66,39 @@ export default function PortfolioPage() {
       />
       <Spacing lg="75" md="60" />
       <div className="container">
-        <Portfolio data={portfolioData} />
-        <div className="cs_height_75 cs_height_lg_40" />
-      </div>
-      <div className="container">
-        <SectionHeading title="Reviews from our clients" subTitle="Reviews" />
+        <div className="d-flex justify-content-center">
+          <div className="cs_portfolio_tabs">
+            <button
+              type="button"
+              className={`cs_tab_btn ${activeTab === "all" ? "active" : ""}`}
+              onClick={() => setActiveTab("all")}
+            >
+              All
+            </button>
+            <button
+              type="button"
+              className={`cs_tab_btn ${activeTab === "ebay" ? "active" : ""}`}
+              onClick={() => setActiveTab("ebay")}
+            >
+              eBay
+            </button>
+            <button
+              type="button"
+              className={`cs_tab_btn ${activeTab === "etsy" ? "active" : ""}`}
+              onClick={() => setActiveTab("etsy")}
+            >
+              Etsy
+            </button>
+          </div>
+        </div>
+        <div className="cs_height_40 cs_height_lg_30" />
+        {filteredPortfolioData.length ? (
+          <Portfolio data={filteredPortfolioData} />
+        ) : (
+          <p className="cs_service_points_desc text-center mb-0">
+            No portfolio available for this platform yet.
+          </p>
+        )}
         <div className="cs_height_75 cs_height_lg_40" />
       </div>
       <TestimonialSlider layeredImages={[]} data={testimonialData} />

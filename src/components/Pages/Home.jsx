@@ -254,15 +254,20 @@ export default function Home({ darkMode }) {
 
             {/* Right: Tabs */}
             <div className="cs_portfolio_tabs">
-              <select
-                className="cs_portfolio_select"
-                value={activeTab}
-                onChange={(event) => setActiveTab(event.target.value)}
-                aria-label="Portfolio platform"
+              <button
+                type="button"
+                className={`cs_tab_btn ${activeTab === "ebay" ? "active" : ""}`}
+                onClick={() => setActiveTab("ebay")}
               >
-                <option value="ebay">eBay</option>
-                <option value="etsy">Etsy</option>
-              </select>
+                eBay
+              </button>
+              <button
+                type="button"
+                className={`cs_tab_btn ${activeTab === "etsy" ? "active" : ""}`}
+                onClick={() => setActiveTab("etsy")}
+              >
+                Etsy
+              </button>
             </div>
           </div>
 
@@ -270,7 +275,7 @@ export default function Home({ darkMode }) {
         </div>
 
         <PortfolioSlider data={filteredPortfolioSliderData} />
-        <Spacing lg="150" md="80" />
+        {/* <Spacing lg="150" md="80" /> */}
       </section>
 
       <TestimonialSlider layeredImages={[]} data={testimonialData} />

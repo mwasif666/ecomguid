@@ -2,8 +2,14 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import Testimonial from '../Testimonial';
+import SectionHeading from '../SectionHeading';
 
-export default function TestimonialSliderStyle2({ data }) {
+export default function TestimonialSliderStyle2({
+  data,
+  showHeading = true,
+  headingTitle = 'What our Clients say',
+  headingSubTitle = 'Testimonials',
+}) {
   return (
     <div className="cs_testimonial_2_wrap cs_primary_bg">
       <div className="container">
@@ -18,6 +24,16 @@ export default function TestimonialSliderStyle2({ data }) {
           </div>
           <div className="col-lg-6">
             <div className="cs_height_150 cs_height_lg_80" />
+            {showHeading ? (
+              <>
+                <SectionHeading
+                  title={headingTitle}
+                  subTitle={headingSubTitle}
+                  variantColor="cs_white_color"
+                />
+                <div className="cs_height_60 cs_height_lg_35" />
+              </>
+            ) : null}
             <Swiper
               slidesPerView={1}
               loop={true}

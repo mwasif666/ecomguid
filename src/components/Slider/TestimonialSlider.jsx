@@ -2,13 +2,23 @@ import React from 'react';
 import Testimonial from '../Testimonial';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import SectionHeading from '../SectionHeading';
 
-export default function TestimonialSlider({ layeredImages, data }) {
+export default function TestimonialSlider({
+  layeredImages,
+  data,
+  showHeading = true,
+  headingTitle = 'What our Clients say',
+  headingSubTitle = 'Testimonials',
+  topSpaceClass = 'cs_height_150 cs_height_lg_80',
+  innerTopSpaceClass = 'cs_height_100 cs_height_lg_80',
+  bottomSpaceClass = 'cs_height_150 cs_height_lg_80',
+}) {
   return (
     <div>
-      <div className="cs_height_150 cs_height_lg_80" />
+      {topSpaceClass ? <div className={topSpaceClass} /> : null}
       <div className="cs_testimonial_1_wrap cs_parallax">
-        <div className="cs_height_100 cs_height_lg_80" />
+        {innerTopSpaceClass ? <div className={innerTopSpaceClass} /> : null}
         <div className="cs_layered_shape_1 position-absolute">
           <svg
             width={48}
@@ -89,6 +99,16 @@ export default function TestimonialSlider({ layeredImages, data }) {
           </div>
         ))}
         <div className="container">
+          {showHeading ? (
+            <>
+              <SectionHeading
+                title={headingTitle}
+                subTitle={headingSubTitle}
+                variantColor="cs_white_color"
+              />
+              <div className="cs_height_85 cs_height_lg_45" />
+            </>
+          ) : null}
           <div className="row">
             <div className="col-lg-8 offset-lg-2">
               <Swiper
@@ -140,7 +160,7 @@ export default function TestimonialSlider({ layeredImages, data }) {
             </div>
           </div>
         </div>
-        <div className="cs_height_150 cs_height_lg_80" />
+        {bottomSpaceClass ? <div className={bottomSpaceClass} /> : null}
       </div>
       {/* End Testimonial */}
     </div>

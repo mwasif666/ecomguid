@@ -95,5 +95,31 @@
       "To date, the store has generated $27,000+ in total profit with a total investment of approximately $4,000, and the business continues to perform consistently."
     ],
     "gallery": ["/images/portfolio/image_12.png"]
+  },
+  {
+    "id": "abdul-hadi",
+    "platform": "etsy",
+    "title": "Abdul Hadi",
+    "subTitle": "Etsy Store Case Study",
+    "thumbnailSrc": "https://res.cloudinary.com/dr0pxq6py/image/upload/v1772212372/7fdf8fca-6ae7-431e-a18c-548e64c7640a.png",
+    "heroImage": "https://res.cloudinary.com/dr0pxq6py/image/upload/v1772212372/7fdf8fca-6ae7-431e-a18c-548e64c7640a.png",
+    "facts": [
+      { "label": "Client", "value": "Mr. Abdul Hadi" },
+      { "label": "Country", "value": "Germany" },
+      { "label": "Investment", "value": "EUR 2.5k" },
+      { "label": "Per Month Profit", "value": "EUR 2k to EUR 2.5k" },
+      { "label": "Business Model", "value": "Private Label" },
+      { "label": "Project Status", "value": "Completed" }
+    ],
+    "summary": [
+      "Mr. Abdul Hadi partnered with us in December 2023. We set up and fully managed his Etsy store from the ground up.",
+      "Within 2-3 months, the store began generating around EUR 800 in monthly profit. By 6-7 months, profits increased to EUR 2,000-EUR 2,500 per month, supported by EUR 5,000-EUR 6,000 in monthly sales during stronger months.",
+      "In one year, the store has generated over EUR 15,000 in total profit with a total investment of approximately EUR 2,500, and the business continues to perform consistently."
+    ],
+    "gallery": [
+      "https://res.cloudinary.com/dr0pxq6py/image/upload/v1772212372/7fdf8fca-6ae7-431e-a18c-548e64c7640a.png",
+      "https://res.cloudinary.com/dr0pxq6py/image/upload/v1772212365/930a737f-6068-4c36-a748-ee917ffd713f.png",
+      "https://res.cloudinary.com/dr0pxq6py/image/upload/v1772212351/7358a7bd-902d-431f-80ba-d0a931c685c2.png"
+    ]
   }
 ]

@@ -993,6 +993,20 @@ hr {
       border-radius: 15px;
     }
   }
+  &.cs_no_shine {
+    .cs_about_thumb {
+      &::before {
+        display: none;
+      }
+    }
+    &:hover {
+      .cs_about_thumb {
+        &::before {
+          animation: none;
+        }
+      }
+    }
+  }
   &:hover {
     .cs_about_thumb {
       &::before {

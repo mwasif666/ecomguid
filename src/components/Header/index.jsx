@@ -124,18 +124,8 @@ export default function Header({
                       </ul>
                     </DropDown>
                   </li>
-                  <li className="menu-item-has-children">
+                  <li>
                     <Link to="/portfolio">Portfolio</Link>
-                    <DropDown>
-                      <ul>
-                        <li>
-                          <Link to="ebay">eBay Store Management</Link>
-                        </li>
-                        <li>
-                          <Link to="etsy">Etsy Store Management</Link>
-                        </li>
-                      </ul>
-                    </DropDown>
                   </li>
                   <li>
                     <Link to="about">About</Link>
