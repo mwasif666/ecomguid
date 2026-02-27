@@ -5,11 +5,11 @@ import Footer from '../Footer';
 
 export default function Layout2({ darkMode }) {
   return (
-    <div className={`${darkMode ? 'cs_dark' : ''}`}>
+    <div className={`${darkMode ? "cs_dark" : ""}`}>
       <Header
         logoUrl="/images/logo_white.png"
         colorVariant="cs_color_1"
-        actionBtnText="Getting Started"
+        actionBtnText="Book a Meeting"
         actionBtnUrl="/contact"
       />
       <Outlet />

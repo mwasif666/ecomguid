@@ -19,8 +19,8 @@ const teamData = [
   {
     memberImg:
       "https://res.cloudinary.com/dr0pxq6py/image/upload/v1772185140/1_Name_M_Rowyfa_Khan_CEO_Founder_qxfir3.png",
-    memberName: "Muhammad Rowyfa Khan",
-    memberDesignation: "CEO Founder",
+    memberName: "M Rowyfa Khan",
+    memberDesignation: "CEO & Founder",
     href: "/team/team-details",
   },
   {
@@ -191,7 +191,7 @@ export default function AboutPage() {
       /> */}
       {/* <Spacing lg="150" md="80" /> */}
       <section className="cs_p76_full_width">
-        <Spacing lg="143" md="75" />
+        {/* <Spacing lg="143" md="75" /> */}
         <div className="container">
           <SectionHeading title="Meet Our Guild" subTitle="Our Team" />
           <Spacing lg="85" md="45" />
@@ -200,7 +200,7 @@ export default function AboutPage() {
       </section>
       {/* <Spacing lg="150" md="80" /> */}
       <TestimonialSlider layeredImages={[]} data={testimonialData} />
-      <Spacing lg="150" md="80" />
+      {/* <Spacing lg="150" md="80" /> */}
       <section>
         <div className="container">
           <Cta

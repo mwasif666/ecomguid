@@ -9,7 +9,7 @@ export default function Layout3({ darkMode }) {
       <Header
         logoUrl={darkMode ? "/images/logo_white.png" : "/images/logo.png"}
         cart
-        actionBtnText="Getting Started"
+        actionBtnText="Book a Meeting"
         actionBtnUrl="/contact"
       />
       <Outlet />

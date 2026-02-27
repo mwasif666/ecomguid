@@ -31,7 +31,6 @@ export default function TestimonialSliderStyle2({
                   subTitle={headingSubTitle}
                   variantColor="cs_white_color"
                 />
-                <div className="cs_height_60 cs_height_lg_35" />
               </>
             ) : null}
             <Swiper

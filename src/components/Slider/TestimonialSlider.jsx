@@ -106,7 +106,6 @@ export default function TestimonialSlider({
                 subTitle={headingSubTitle}
                 variantColor="cs_white_color"
               />
-              <div className="cs_height_85 cs_height_lg_45" />
             </>
           ) : null}
           <div className="row">
