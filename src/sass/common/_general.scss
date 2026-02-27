@@ -536,7 +536,9 @@ hr {
 }
 .cs_img_card.cs_style_2 {
   height: 650px;
-  width: 50vw;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 18px;
   @media screen and (min-width: 992px) and (max-width: 1199px) {
     .cs_to_up_4 {
       transform: initial !important;
@@ -985,6 +987,12 @@ hr {
       z-index: 1;
     }
   }
+  &.cs_inside_container {
+    .cs_about_thumb {
+      margin-left: 0;
+      border-radius: 15px;
+    }
+  }
   &:hover {
     .cs_about_thumb {
       &::before {
@@ -1113,22 +1121,36 @@ hr {
   }
 }
 .cs_service_info {
+  .cs_service_text_col {
+    @media (min-width: 992px) {
+      padding-right: 70px;
+    }
+  }
   .cs_service_info_thumb {
     overflow: hidden;
     position: relative;
-    height: 620px;
+    height: 500px;
     width: 100%;
-    padding-right: 134px;
-    // margin-left: calc(-50vw + 94%);
-    border-radius: 0 5px 5px 0;
+    max-width: 560px;
+    margin-left: auto;
+    padding-right: 0;
+    border-radius: 15px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
     @media (max-width: 991px) {
       width: 100%;
+      max-width: 100%;
       margin-left: 0;
       border-radius: 15px;
-      height: 500px;
+      height: 420px;
     }
     @media (max-width: 575px) {
-      height: 400px;
+      height: 320px;
     }
   }
 }

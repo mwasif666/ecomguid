@@ -9,9 +9,12 @@ export default function AboutStyle4({
   subTitle,
   btnText,
   btnUrl,
+  insideContainer,
 }) {
   return (
-    <div className="cs_about cs_style_1">
+    <div
+      className={`cs_about cs_style_1 ${insideContainer ? 'cs_inside_container' : ''}`}
+    >
       <div className="container">
         <div className="row align-items-center cs_gap_y_40">
           <div className="col-lg-6">

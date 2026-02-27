@@ -10,9 +10,14 @@ export default function AboutStyle6({
   featureList,
   btnText,
   btnUrl,
+  imageContain,
 }) {
   return (
-    <div className="cs_about cs_style_2 cs_type_2">
+    <div
+      className={`cs_about cs_style_2 cs_type_2 ${
+        imageContain ? 'cs_about_full_image' : ''
+      }`}
+    >
       <div className="container">
         <div className="row align-items-center cs_gap_y_40">
           <div className="col-lg-6">

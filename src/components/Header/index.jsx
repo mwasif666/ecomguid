@@ -111,35 +111,34 @@ export default function Header({
                       </ul>
                     </DropDown> */}
                   </li>
-                  <li>
-                    <Link to="about">About</Link>
+                  <li className="menu-item-has-children">
+                    <Link to="/service">Services</Link>
+                    <DropDown>
+                      <ul>
+                        <li>
+                          <Link to="service/ebay">eBay Store Management</Link>
+                        </li>
+                        <li>
+                          <Link to="service/etsy">Etsy Store Management</Link>
+                        </li>
+                      </ul>
+                    </DropDown>
                   </li>
                   <li className="menu-item-has-children">
                     <Link to="/portfolio">Portfolio</Link>
                     <DropDown>
                       <ul>
                         <li>
-                          <Link to="ebay">eBay</Link>
+                          <Link to="ebay">eBay Store Management</Link>
                         </li>
                         <li>
-                          <Link to="etsy">Etsy</Link>
+                          <Link to="etsy">Etsy Store Management</Link>
                         </li>
                       </ul>
                     </DropDown>
                   </li>
-
-                  <li className="menu-item-has-children">
-                    <Link to="/service">Services</Link>
-                    <DropDown>
-                      <ul>
-                        <li>
-                          <Link to="service/ebay">eBay</Link>
-                        </li>
-                        <li>
-                          <Link to="service/etsy">Etsy</Link>
-                        </li>
-                      </ul>
-                    </DropDown>
+                  <li>
+                    <Link to="about">About</Link>
                   </li>
 
                   {/* <li className="menu-item-has-children">
@@ -210,7 +209,7 @@ export default function Header({
                     </DropDown>
                   </li> */}
                   <li>
-                    <Link to="contact">Contact</Link>
+                    <Link to="contact">Contact Us</Link>
                   </li>
                 </ul>
                 <span

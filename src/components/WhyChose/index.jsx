@@ -1,5 +1,4 @@
 import React from 'react';
-import { Parallax } from 'react-parallax';
 import Accordion from '../Accordion';
 import Spacing from '../Spacing';
 
@@ -25,12 +24,13 @@ export default function WhyChose({
             <Accordion data={whyChoseFeatureData} />
           </div>
           <div className="col-lg-6 offset-xxl-1">
-            <div className="cs_img_card cs_style_2 cs_bg_filed cs_parallax overflow-hidden">
-              <Parallax
-                bgImage={thumbnailSrc}
-                bgImageAlt="Thumb"
-                strength={-200}
-              ></Parallax>
+            <div className="cs_img_card cs_style_2 cs_bg_filed cs_parallax overflow-hidden cs_radius_15">
+              <img
+                src={thumbnailSrc}
+                alt="Why Choose Us"
+                className="w-100 h-100 object-fit-cover"
+                style={{ objectPosition: 'center center' }}
+              />
             </div>
           </div>
         </div>

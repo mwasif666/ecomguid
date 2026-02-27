@@ -134,17 +134,33 @@ const faqData = [
 const servideData = [
   {
     iconSrc: "/images/marketing-agency/service_icon_1.svg",
-    title: "ebay",
-    subTitle:
-      "We offer end-to-end eBay store management, covering account creation and setup, product research, listing creation & optimization, order processing and fulfillment, customer support, returns & refunds handling, account health management, and performance tracking and reporting.",
+    title: "ebay Store Management",
+    subTitle: [
+      "Account creation and setup",
+      "Product research",
+      "Listing creation and optimization",
+      "Order processing and fulfillment",
+      "Customer support",
+      "Returns and refunds handling",
+      "Account health management",
+      "Performance tracking and reporting",
+    ],
     // btnText: "See More",
     // btnUrl: "/service/service-details",
   },
   {
     iconSrc: "/images/marketing-agency/service_icon_2.svg",
-    title: "Etsy",
-    subTitle:
-      "We offer end-to-end Etsy store management, covering account creation and setup, niche & product research, listing creation & optimization, order processing & fulfillment, customer support, returns & refunds handling, account health management, and performance tracking and reporting.",
+    title: "Etsy Store Management",
+    subTitle: [
+      "Account creation and setup",
+      "Niche and product research",
+      "Listing creation and optimization",
+      "Order processing and fulfillment",
+      "Customer support",
+      "Returns and refunds handling",
+      "Account health management",
+      "Performance tracking and reporting",
+    ],
     // btnText: "See More",
     // btnUrl: "/service/service-details",
   },
@@ -215,7 +231,7 @@ export default function Home({ darkMode }) {
         sectionTitle="Smart, Low-Risk Partnership"
         sectionSubTitle="Why Choose Us"
         whyChoseFeatureData={whyChoseFeatureData}
-        thumbnailSrc="/images/creative-agency/why_choose_us_img_3.jpeg"
+        thumbnailSrc="https://captens.com/wp-content/uploads/2023/05/We-Outbid-PPC.png"
       />
 
       <Spacing lg="150" md="80" />

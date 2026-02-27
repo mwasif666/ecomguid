@@ -23,6 +23,17 @@
     color: #ddd;
     margin-bottom: 26px;
   }
+  .cs_iconbox_subtitle_list {
+    margin: 0 0 26px 0;
+    padding-left: 20px;
+    list-style: disc outside none;
+    li {
+      color: #ddd;
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+  }
   .cs_iconbox_title {
     margin-bottom: 25px;
   }

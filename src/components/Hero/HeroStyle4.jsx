@@ -1,6 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function HeroStyle4({ bgUrl, thumbnailSrc, title, subTitle }) {
+export default function HeroStyle4({
+  bgUrl,
+  thumbnailSrc,
+  title,
+  subTitle,
+  colorVariant,
+  cart,
+  actionBtnText,
+  actionBtnUrl,
+}) {
   return (
     <section
       className="cs_hero cs_style_4 position-relative"
@@ -13,7 +23,31 @@ export default function HeroStyle4({ bgUrl, thumbnailSrc, title, subTitle }) {
           <div className="col-lg-6 align-items-center">
             <div className="cs_hero_subtitle">
               <h1 className="cs_hero_title">{title}</h1>
-              <p className="mb-0">{subTitle}</p>
+              <p className="mb-0" style={{ fontSize: "18px" }}>
+                {subTitle}
+              </p>
+              {/* <button
+                className="btn cs_center cs_primary_color"
+                style={{
+                  marginTop: "20px",
+                  padding: "12px 30px",
+                  fontSize: "16px",
+                  fontWeight: "500",
+                  borderRadius: "15px",
+                  border: "1px solid #fff",
+                  backgroundColor: "transparent",
+                  color: "#fff",
+                  cursor: "pointer",
+                }}
+              ></button> */}
+              <Link
+                to={actionBtnUrl}
+                className={`cs_btn cs_style_1 mt-4 ${
+                  colorVariant ? "cs_btn_white" : ""
+                }`}
+              >
+                Schedule a Call
+              </Link>
               {/* <a
                 href="#service"
                 className="cs_down_btn cs_center cs_primary_color"

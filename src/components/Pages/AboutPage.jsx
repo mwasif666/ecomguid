@@ -10,7 +10,7 @@ import TestimonialSlider from '../Slider/TestimonialSlider';
 import Cta from '../Cta';
 import { pageTitle } from '../../helpers/PageTitle';
 const funfactData = [
-  { title: 'Experience', number: '3+ years' },
+  { title: 'Years of Experience', number: '3+' },
   { title: 'Active Stores Managed', number: '50+' },
   { title: 'Total Profit Generated', number: '$700K+' },
   { title: 'Total Sales Generated', number: '$4M+' },
@@ -115,16 +115,16 @@ export default function AboutPage() {
         thumbnailSrc="/images/digital-agency/about_1.jpeg"
         miniTitle="About Us"
         title="E-commerce Agency for your Business."
+        insideContainer
         subTitle={
           <>
             Ecom Guild helps people build profitable side businesses on
             e-commerce marketplaces like eBay and Etsy.
             <br />
             <br />
-            We are a guild of 20+ professionals who manage everything end to
-            end product research, listings, orders, customer support, and
-            account management so our partners can earn with minimal time
-            involvement.
+            We are a guild of 20+ professionals who manage everything end to end
+            product research, listings, orders, customer support, and account
+            management so our partners can earn with minimal time involvement.
             <br />
             <br />
             Our goal is simple: make e-commerce easy, transparent, and
@@ -144,10 +144,10 @@ export default function AboutPage() {
         title="We Build & Scale Profitable E-Commerce Businesses"
         subTitle="We help people build a profitable side income on platforms like eBay and Etsy with no upfront costs, no prior e-commerce experience, and minimal time involvement, achieving results within 4 to 5 months."
         featureList={[
-          'No upfront fees',
-          'No prior e-commerce experience required',
-          'Results in 4-5 months with minimal time involvement',
-          'End-to-end eBay & Etsy store management',
+          "No upfront fees",
+          "No prior e-commerce experience required",
+          "Results in 4-5 months with minimal time involvement",
+          "End-to-end eBay & Etsy store management",
         ]}
         btnText="See Our Services"
         btnUrl="/service"
@@ -156,10 +156,7 @@ export default function AboutPage() {
       <section className="cs_p76_full_width">
         <Spacing lg="143" md="75" />
         <div className="container">
-          <SectionHeading
-            title="Meet Our Guild"
-            subTitle="Our Team"
-          />
+          <SectionHeading title="Meet Our Guild" subTitle="Our Team" />
           <Spacing lg="85" md="45" />
         </div>
         <TeamSlider data={teamData} />

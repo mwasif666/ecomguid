@@ -9,6 +9,8 @@ export default function IconBox({
   btnUrl,
   shapeClass,
 }) {
+  const hasBulletList = Array.isArray(subTitle);
+
   return (
     <div className="cs_iconbox cs_style_1 cs_primary_bg cs_radius_15">
       <div className="cs_iconbox_icon position-relative cs_center">
@@ -31,7 +33,15 @@ export default function IconBox({
         </span>
       </div>
       <h2 className="cs_iconbox_title cs_fs_29 cs_white_color">{title}</h2>
-      <p className="cs_iconbox_subtitle">{subTitle}</p>
+      {hasBulletList ? (
+        <ul className="cs_iconbox_subtitle cs_iconbox_subtitle_list">
+          {subTitle.map((item, index) => (
+            <li key={`${title}-point-${index}`}>{item}</li>
+          ))}
+        </ul>
+      ) : (
+        <p className="cs_iconbox_subtitle">{subTitle}</p>
+      )}
       <Link to={btnUrl} className="cs_iconbox_btn cs_white_color">
         {btnText}
         {/* <svg
